@@ -1,0 +1,187 @@
+2026-04-20T01:23:21.153Z - error: Error occurred during reporter init: Error: Error when loading extension jsrender@2.1.1
+Error: Extension "jsrender" is not compatible with "core" extension. Missing ".requires" information in "jsrender" definition
+    at validateMinimalVersion (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+2026-04-20T01:59:01.744Z - error: Error occurred during reporter init: Error: Error when loading extension jsrender@2.1.1
+Error: Extension "jsrender" is not compatible with "core" extension. Missing ".requires" information in "jsrender" definition
+    at validateMinimalVersion (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+2026-04-20T02:01:38.450Z - error: Error occurred during reporter init: Error: Error when loading extension jsrender@2.1.1
+Error: Extension "jsrender" is not compatible with "core" extension. Missing ".requires" information in "jsrender" definition
+    at validateMinimalVersion (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+2026-04-20T03:06:22.848Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:06:22.848Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:10.798Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:10.798Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:23.543Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:23.544Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:17:09.419Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:17:09.419Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:20:40.598Z - error: Error when starting http server on port 3001 Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:20:40.599Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:37:04.220Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:37:04.221Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:37:59.547Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:37:59.548Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)

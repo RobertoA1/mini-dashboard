@@ -1,0 +1,905 @@
+2026-04-20T01:23:09.072Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T01:23:09.081Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T01:23:09.094Z - info: Extensions location cache not found, crawling directories
+2026-04-20T01:23:20.943Z - info: Found 35 extension(s)
+2026-04-20T01:23:21.067Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T01:23:21.070Z - debug: Discovered 35 extensions
+2026-04-20T01:23:21.153Z - error: Error occurred during reporter init: Error: Error when loading extension jsrender@2.1.1
+Error: Extension "jsrender" is not compatible with "core" extension. Missing ".requires" information in "jsrender" definition
+    at validateMinimalVersion (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+2026-04-20T01:59:01.543Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T01:59:01.548Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T01:59:01.566Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T01:59:01.594Z - info: Found 35 extension(s)
+2026-04-20T01:59:01.683Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T01:59:01.686Z - debug: Discovered 35 extensions
+2026-04-20T01:59:01.744Z - error: Error occurred during reporter init: Error: Error when loading extension jsrender@2.1.1
+Error: Extension "jsrender" is not compatible with "core" extension. Missing ".requires" information in "jsrender" definition
+    at validateMinimalVersion (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+2026-04-20T02:01:38.311Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:01:38.315Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T02:01:38.325Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T02:01:38.340Z - info: Found 35 extension(s)
+2026-04-20T02:01:38.393Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T02:01:38.396Z - debug: Discovered 35 extensions
+2026-04-20T02:01:38.450Z - error: Error occurred during reporter init: Error: Error when loading extension jsrender@2.1.1
+Error: Extension "jsrender" is not compatible with "core" extension. Missing ".requires" information in "jsrender" definition
+    at validateMinimalVersion (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\validateMinimalVersion.js:24:11)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:158:9)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+    at Object._useOne (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:248:15)
+    at Object._useMany (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:99:38)
+    at Object.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\extensions\extensionsManager.js:74:19)
+    at MainReporter.init (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\main\reporter.js:207:36)
+2026-04-20T02:08:12.810Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:08:12.834Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T02:08:12.835Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T02:08:12.893Z - info: Initializing worker threads
+2026-04-20T02:08:12.894Z - debug: Extensions in workers: 
+2026-04-20T02:08:13.403Z - info: 2 worker threads initialized in 511ms
+2026-04-20T02:08:13.404Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T02:08:13.405Z - info: reporter initialized
+2026-04-20T02:08:13.513Z - info: Render request 1 queued for execution and waiting for available worker rootId=fplfxbdsq52cc6n, id=fplfxbdsq52cc6n
+2026-04-20T02:08:13.523Z - info: Starting rendering request 1 rootId=fplfxbdsq52cc6n, id=fplfxbdsq52cc6n
+2026-04-20T02:08:13.525Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=fplfxbdsq52cc6n, id=fplfxbdsq52cc6n
+2026-04-20T02:08:13.526Z - debug: Rendering engine none rootId=fplfxbdsq52cc6n, id=fplfxbdsq52cc6n
+2026-04-20T02:08:14.082Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=fplfxbdsq52cc6n, id=fplfxbdsq52cc6n
+2026-04-20T02:08:14.082Z - warn: Rendering request 1 finished with error in 574 ms rootId=fplfxbdsq52cc6n, id=fplfxbdsq52cc6n
+2026-04-20T02:29:01.558Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:29:01.582Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T02:29:01.584Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T02:29:01.638Z - info: Initializing worker threads
+2026-04-20T02:29:01.639Z - debug: Extensions in workers: 
+2026-04-20T02:29:02.367Z - info: 2 worker threads initialized in 729ms
+2026-04-20T02:29:02.371Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T02:29:02.377Z - info: reporter initialized
+2026-04-20T02:29:02.429Z - info: Render request 1 queued for execution and waiting for available worker rootId=c3al7dxd9jd8h19, id=c3al7dxd9jd8h19
+2026-04-20T02:29:02.449Z - info: Starting rendering request 1 rootId=c3al7dxd9jd8h19, id=c3al7dxd9jd8h19
+2026-04-20T02:29:02.453Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=c3al7dxd9jd8h19, id=c3al7dxd9jd8h19
+2026-04-20T02:29:02.453Z - debug: Rendering engine none rootId=c3al7dxd9jd8h19, id=c3al7dxd9jd8h19
+2026-04-20T02:29:03.274Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=c3al7dxd9jd8h19, id=c3al7dxd9jd8h19
+2026-04-20T02:29:03.274Z - warn: Rendering request 1 finished with error in 851 ms rootId=c3al7dxd9jd8h19, id=c3al7dxd9jd8h19
+2026-04-20T02:39:25.328Z - info: Render request 2 queued for execution and waiting for available worker rootId=9iipu5w8q62ws56, id=9iipu5w8q62ws56
+2026-04-20T02:39:25.335Z - info: Starting rendering request 2 rootId=9iipu5w8q62ws56, id=9iipu5w8q62ws56
+2026-04-20T02:39:25.336Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=9iipu5w8q62ws56, id=9iipu5w8q62ws56
+2026-04-20T02:39:25.337Z - debug: Rendering engine none rootId=9iipu5w8q62ws56, id=9iipu5w8q62ws56
+2026-04-20T02:39:26.007Z - warn: Error when processing render request 2
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=9iipu5w8q62ws56, id=9iipu5w8q62ws56
+2026-04-20T02:39:26.007Z - warn: Rendering request 2 finished with error in 682 ms rootId=9iipu5w8q62ws56, id=9iipu5w8q62ws56
+2026-04-20T02:40:46.611Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:40:46.632Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T02:40:46.632Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T02:40:46.675Z - info: Initializing worker threads
+2026-04-20T02:40:46.676Z - debug: Extensions in workers: 
+2026-04-20T02:40:47.095Z - info: 2 worker threads initialized in 420ms
+2026-04-20T02:40:47.096Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T02:40:47.097Z - info: reporter initialized
+2026-04-20T02:40:47.131Z - info: Render request 1 queued for execution and waiting for available worker rootId=rux6ixfp81itk2b, id=rux6ixfp81itk2b
+2026-04-20T02:40:47.140Z - info: Starting rendering request 1 rootId=rux6ixfp81itk2b, id=rux6ixfp81itk2b
+2026-04-20T02:40:47.143Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=rux6ixfp81itk2b, id=rux6ixfp81itk2b
+2026-04-20T02:40:47.144Z - debug: Rendering engine none rootId=rux6ixfp81itk2b, id=rux6ixfp81itk2b
+2026-04-20T02:40:47.376Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=rux6ixfp81itk2b, id=rux6ixfp81itk2b
+2026-04-20T02:40:47.376Z - warn: Rendering request 1 finished with error in 249 ms rootId=rux6ixfp81itk2b, id=rux6ixfp81itk2b
+2026-04-20T02:45:33.172Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:45:33.197Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T02:45:33.199Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T02:45:33.248Z - info: Initializing worker threads
+2026-04-20T02:45:33.249Z - debug: Extensions in workers: 
+2026-04-20T02:45:33.630Z - info: 2 worker threads initialized in 382ms
+2026-04-20T02:45:33.632Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T02:45:33.633Z - info: reporter initialized
+2026-04-20T02:45:33.668Z - info: Render request 1 queued for execution and waiting for available worker rootId=jk9aobgc644uq8a, id=jk9aobgc644uq8a
+2026-04-20T02:45:33.677Z - info: Starting rendering request 1 rootId=jk9aobgc644uq8a, id=jk9aobgc644uq8a
+2026-04-20T02:45:33.678Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=jk9aobgc644uq8a, id=jk9aobgc644uq8a
+2026-04-20T02:45:33.679Z - debug: Rendering engine none rootId=jk9aobgc644uq8a, id=jk9aobgc644uq8a
+2026-04-20T02:45:34.074Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=jk9aobgc644uq8a, id=jk9aobgc644uq8a
+2026-04-20T02:45:34.074Z - warn: Rendering request 1 finished with error in 412 ms rootId=jk9aobgc644uq8a, id=jk9aobgc644uq8a
+2026-04-20T02:45:50.989Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:45:51.010Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T02:45:51.011Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T02:45:51.047Z - info: Initializing worker threads
+2026-04-20T02:45:51.048Z - debug: Extensions in workers: 
+2026-04-20T02:45:51.466Z - info: 2 worker threads initialized in 419ms
+2026-04-20T02:45:51.467Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T02:45:51.468Z - info: reporter initialized
+2026-04-20T02:45:51.499Z - info: Render request 1 queued for execution and waiting for available worker rootId=s3409ti2n2gptdz, id=s3409ti2n2gptdz
+2026-04-20T02:45:51.506Z - info: Starting rendering request 1 rootId=s3409ti2n2gptdz, id=s3409ti2n2gptdz
+2026-04-20T02:45:51.508Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=s3409ti2n2gptdz, id=s3409ti2n2gptdz
+2026-04-20T02:45:51.509Z - debug: Rendering engine none rootId=s3409ti2n2gptdz, id=s3409ti2n2gptdz
+2026-04-20T02:45:51.875Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=s3409ti2n2gptdz, id=s3409ti2n2gptdz
+2026-04-20T02:45:51.875Z - warn: Rendering request 1 finished with error in 380 ms rootId=s3409ti2n2gptdz, id=s3409ti2n2gptdz
+2026-04-20T02:46:01.938Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:46:01.959Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T02:46:01.960Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T02:46:02.001Z - info: Initializing worker threads
+2026-04-20T02:46:02.002Z - debug: Extensions in workers: 
+2026-04-20T02:46:02.337Z - info: 2 worker threads initialized in 336ms
+2026-04-20T02:46:02.339Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T02:46:02.341Z - info: reporter initialized
+2026-04-20T02:46:02.373Z - info: Render request 1 queued for execution and waiting for available worker rootId=ghhgaawn1c47z4j, id=ghhgaawn1c47z4j
+2026-04-20T02:46:02.380Z - info: Starting rendering request 1 rootId=ghhgaawn1c47z4j, id=ghhgaawn1c47z4j
+2026-04-20T02:46:02.381Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=ghhgaawn1c47z4j, id=ghhgaawn1c47z4j
+2026-04-20T02:46:02.382Z - debug: Rendering engine none rootId=ghhgaawn1c47z4j, id=ghhgaawn1c47z4j
+2026-04-20T02:46:02.736Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=ghhgaawn1c47z4j, id=ghhgaawn1c47z4j
+2026-04-20T02:46:02.736Z - warn: Rendering request 1 finished with error in 367 ms rootId=ghhgaawn1c47z4j, id=ghhgaawn1c47z4j
+2026-04-20T02:46:25.699Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T02:46:25.716Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T02:46:25.717Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T02:46:25.747Z - info: Initializing worker threads
+2026-04-20T02:46:25.748Z - debug: Extensions in workers: 
+2026-04-20T02:46:26.094Z - info: 2 worker threads initialized in 347ms
+2026-04-20T02:46:26.095Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T02:46:26.096Z - info: reporter initialized
+2026-04-20T02:46:26.131Z - info: Render request 1 queued for execution and waiting for available worker rootId=fhlwut11ck7em95, id=fhlwut11ck7em95
+2026-04-20T02:46:26.140Z - info: Starting rendering request 1 rootId=fhlwut11ck7em95, id=fhlwut11ck7em95
+2026-04-20T02:46:26.141Z - info: Rendering anonymous template { recipe: jsreport-chrome-pdf, engine: none } rootId=fhlwut11ck7em95, id=fhlwut11ck7em95
+2026-04-20T02:46:26.142Z - debug: Rendering engine none rootId=fhlwut11ck7em95, id=fhlwut11ck7em95
+2026-04-20T02:46:26.541Z - warn: Error when processing render request 1
+(because) recipe 'jsreport-chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'jsreport-chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=fhlwut11ck7em95, id=fhlwut11ck7em95
+2026-04-20T02:46:26.541Z - warn: Rendering request 1 finished with error in 414 ms rootId=fhlwut11ck7em95, id=fhlwut11ck7em95
+2026-04-20T03:05:36.684Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T03:05:36.713Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T03:05:36.715Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T03:05:36.778Z - info: Initializing worker threads
+2026-04-20T03:05:36.779Z - debug: Extensions in workers: 
+2026-04-20T03:05:37.512Z - info: 2 worker threads initialized in 735ms
+2026-04-20T03:05:37.514Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T03:05:37.515Z - info: reporter initialized
+2026-04-20T03:05:37.610Z - info: Render request 1 queued for execution and waiting for available worker rootId=vkwp0kh3rmft9tl, id=vkwp0kh3rmft9tl
+2026-04-20T03:05:37.618Z - info: Starting rendering request 1 rootId=vkwp0kh3rmft9tl, id=vkwp0kh3rmft9tl
+2026-04-20T03:05:37.619Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=vkwp0kh3rmft9tl, id=vkwp0kh3rmft9tl
+2026-04-20T03:05:37.619Z - debug: Rendering engine none rootId=vkwp0kh3rmft9tl, id=vkwp0kh3rmft9tl
+2026-04-20T03:05:38.111Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=vkwp0kh3rmft9tl, id=vkwp0kh3rmft9tl
+2026-04-20T03:05:38.112Z - warn: Rendering request 1 finished with error in 506 ms rootId=vkwp0kh3rmft9tl, id=vkwp0kh3rmft9tl
+2026-04-20T03:06:10.087Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T03:06:10.092Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T03:06:10.103Z - info: Extensions location cache C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2026-04-20T03:06:18.836Z - info: Found 35 extension(s)
+2026-04-20T03:06:18.950Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T03:06:18.953Z - debug: Discovered 35 extensions
+2026-04-20T03:06:19.031Z - info: Using extension authentication@4.3.1
+2026-04-20T03:06:19.691Z - debug: Extension authentication@4.3.1 was disabled
+2026-04-20T03:06:19.693Z - info: Using extension base@4.1.0
+2026-04-20T03:06:19.700Z - info: Using extension child-templates@4.2.0
+2026-04-20T03:06:19.704Z - info: Using extension cli@4.2.0
+2026-04-20T03:06:19.715Z - info: Using extension components@4.1.0
+2026-04-20T03:06:19.722Z - info: Using extension data@4.2.0
+2026-04-20T03:06:19.725Z - info: Using extension express@4.3.1
+2026-04-20T03:06:20.944Z - info: Using extension freeze@4.1.0
+2026-04-20T03:06:20.948Z - info: Using extension fs-store@4.2.0
+2026-04-20T03:06:21.356Z - debug: Extension fs-store@4.2.0 was disabled
+2026-04-20T03:06:21.357Z - info: Using extension handlebars@4.1.0
+2026-04-20T03:06:21.361Z - info: Using extension import-export@4.1.0
+2026-04-20T03:06:21.398Z - info: Using extension jsrender@4.1.0
+2026-04-20T03:06:21.401Z - info: Using extension licensing@4.1.0
+2026-04-20T03:06:21.538Z - info: Using extension localization@4.1.0
+2026-04-20T03:06:21.541Z - info: Using extension npm@4.1.0
+2026-04-20T03:06:21.552Z - info: Using extension pdf-utils@4.5.3
+2026-04-20T03:06:21.563Z - info: Using extension reports@4.3.0
+2026-04-20T03:06:21.571Z - info: Using extension tags@4.1.0
+2026-04-20T03:06:21.577Z - info: Using extension text@4.1.0
+2026-04-20T03:06:21.588Z - info: Using extension version-control@4.2.1
+2026-04-20T03:06:21.622Z - info: Using extension assets@4.3.0
+2026-04-20T03:06:21.664Z - info: Using extension authorization@4.2.0
+2026-04-20T03:06:21.680Z - debug: Extension authorization@4.2.0 was disabled
+2026-04-20T03:06:21.681Z - info: Using extension browser-client@4.2.0
+2026-04-20T03:06:21.690Z - info: Using extension chrome-pdf@4.4.0
+2026-04-20T03:06:21.697Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-04-20T03:06:21.699Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-04-20T03:06:21.700Z - info: Using extension docx@4.10.1
+2026-04-20T03:06:21.707Z - info: Using extension html-to-xlsx@4.4.0
+2026-04-20T03:06:22.402Z - info: html-to-xlsx detected chrome as available html engine
+2026-04-20T03:06:22.402Z - info: Using extension pptx@4.5.0
+2026-04-20T03:06:22.410Z - info: Using extension scheduling@4.2.0
+2026-04-20T03:06:22.472Z - info: Using extension scripts@4.3.0
+2026-04-20T03:06:22.475Z - info: Using extension static-pdf@4.2.0
+2026-04-20T03:06:22.478Z - info: Using extension studio@4.4.1
+2026-04-20T03:06:22.740Z - info: Using extension xlsx@4.6.1
+2026-04-20T03:06:22.748Z - info: Using extension public-templates@4.1.0
+2026-04-20T03:06:22.752Z - debug: Extension public-templates@4.1.0 was disabled
+2026-04-20T03:06:22.754Z - info: Using extension sample-template@4.1.0
+2026-04-20T03:06:22.759Z - info: Using extension studio-theme-dark@4.1.0
+2026-04-20T03:06:22.765Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T03:06:22.765Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T03:06:22.788Z - debug: studio default theme is: light
+2026-04-20T03:06:22.798Z - info: Creating default express app.
+2026-04-20T03:06:22.848Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:06:22.848Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:08.566Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T03:08:08.571Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T03:08:08.580Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T03:08:08.599Z - info: Found 35 extension(s)
+2026-04-20T03:08:08.656Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T03:08:08.659Z - debug: Discovered 35 extensions
+2026-04-20T03:08:08.716Z - info: Using extension authentication@4.3.1
+2026-04-20T03:08:09.099Z - debug: Extension authentication@4.3.1 was disabled
+2026-04-20T03:08:09.100Z - info: Using extension base@4.1.0
+2026-04-20T03:08:09.105Z - info: Using extension child-templates@4.2.0
+2026-04-20T03:08:09.108Z - info: Using extension cli@4.2.0
+2026-04-20T03:08:09.113Z - info: Using extension components@4.1.0
+2026-04-20T03:08:09.117Z - info: Using extension data@4.2.0
+2026-04-20T03:08:09.119Z - info: Using extension express@4.3.1
+2026-04-20T03:08:09.731Z - info: Using extension freeze@4.1.0
+2026-04-20T03:08:09.735Z - info: Using extension fs-store@4.2.0
+2026-04-20T03:08:09.949Z - debug: Extension fs-store@4.2.0 was disabled
+2026-04-20T03:08:09.950Z - info: Using extension handlebars@4.1.0
+2026-04-20T03:08:09.954Z - info: Using extension import-export@4.1.0
+2026-04-20T03:08:09.978Z - info: Using extension jsrender@4.1.0
+2026-04-20T03:08:09.980Z - info: Using extension licensing@4.1.0
+2026-04-20T03:08:10.042Z - info: Using extension localization@4.1.0
+2026-04-20T03:08:10.046Z - info: Using extension npm@4.1.0
+2026-04-20T03:08:10.052Z - info: Using extension pdf-utils@4.5.3
+2026-04-20T03:08:10.056Z - info: Using extension reports@4.3.0
+2026-04-20T03:08:10.061Z - info: Using extension tags@4.1.0
+2026-04-20T03:08:10.064Z - info: Using extension text@4.1.0
+2026-04-20T03:08:10.065Z - info: Using extension version-control@4.2.1
+2026-04-20T03:08:10.089Z - info: Using extension assets@4.3.0
+2026-04-20T03:08:10.111Z - info: Using extension authorization@4.2.0
+2026-04-20T03:08:10.119Z - debug: Extension authorization@4.2.0 was disabled
+2026-04-20T03:08:10.120Z - info: Using extension browser-client@4.2.0
+2026-04-20T03:08:10.124Z - info: Using extension chrome-pdf@4.4.0
+2026-04-20T03:08:10.129Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-04-20T03:08:10.130Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-04-20T03:08:10.130Z - info: Using extension docx@4.10.1
+2026-04-20T03:08:10.134Z - info: Using extension html-to-xlsx@4.4.0
+2026-04-20T03:08:10.549Z - info: html-to-xlsx detected chrome as available html engine
+2026-04-20T03:08:10.550Z - info: Using extension pptx@4.5.0
+2026-04-20T03:08:10.555Z - info: Using extension scheduling@4.2.0
+2026-04-20T03:08:10.591Z - info: Using extension scripts@4.3.0
+2026-04-20T03:08:10.593Z - info: Using extension static-pdf@4.2.0
+2026-04-20T03:08:10.594Z - info: Using extension studio@4.4.1
+2026-04-20T03:08:10.734Z - info: Using extension xlsx@4.6.1
+2026-04-20T03:08:10.737Z - info: Using extension public-templates@4.1.0
+2026-04-20T03:08:10.740Z - debug: Extension public-templates@4.1.0 was disabled
+2026-04-20T03:08:10.742Z - info: Using extension sample-template@4.1.0
+2026-04-20T03:08:10.745Z - info: Using extension studio-theme-dark@4.1.0
+2026-04-20T03:08:10.748Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T03:08:10.749Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T03:08:10.767Z - debug: studio default theme is: light
+2026-04-20T03:08:10.773Z - info: Creating default express app.
+2026-04-20T03:08:10.798Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:10.798Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:21.174Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T03:08:21.178Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T03:08:21.185Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T03:08:21.201Z - info: Found 35 extension(s)
+2026-04-20T03:08:21.270Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T03:08:21.273Z - debug: Discovered 35 extensions
+2026-04-20T03:08:21.336Z - info: Using extension authentication@4.3.1
+2026-04-20T03:08:21.724Z - debug: Extension authentication@4.3.1 was disabled
+2026-04-20T03:08:21.726Z - info: Using extension base@4.1.0
+2026-04-20T03:08:21.731Z - info: Using extension child-templates@4.2.0
+2026-04-20T03:08:21.734Z - info: Using extension cli@4.2.0
+2026-04-20T03:08:21.741Z - info: Using extension components@4.1.0
+2026-04-20T03:08:21.745Z - info: Using extension data@4.2.0
+2026-04-20T03:08:21.749Z - info: Using extension express@4.3.1
+2026-04-20T03:08:22.384Z - info: Using extension freeze@4.1.0
+2026-04-20T03:08:22.388Z - info: Using extension fs-store@4.2.0
+2026-04-20T03:08:22.618Z - debug: Extension fs-store@4.2.0 was disabled
+2026-04-20T03:08:22.618Z - info: Using extension handlebars@4.1.0
+2026-04-20T03:08:22.621Z - info: Using extension import-export@4.1.0
+2026-04-20T03:08:22.644Z - info: Using extension jsrender@4.1.0
+2026-04-20T03:08:22.647Z - info: Using extension licensing@4.1.0
+2026-04-20T03:08:22.710Z - info: Using extension localization@4.1.0
+2026-04-20T03:08:22.712Z - info: Using extension npm@4.1.0
+2026-04-20T03:08:22.718Z - info: Using extension pdf-utils@4.5.3
+2026-04-20T03:08:22.724Z - info: Using extension reports@4.3.0
+2026-04-20T03:08:22.732Z - info: Using extension tags@4.1.0
+2026-04-20T03:08:22.736Z - info: Using extension text@4.1.0
+2026-04-20T03:08:22.738Z - info: Using extension version-control@4.2.1
+2026-04-20T03:08:22.770Z - info: Using extension assets@4.3.0
+2026-04-20T03:08:22.794Z - info: Using extension authorization@4.2.0
+2026-04-20T03:08:22.802Z - debug: Extension authorization@4.2.0 was disabled
+2026-04-20T03:08:22.803Z - info: Using extension browser-client@4.2.0
+2026-04-20T03:08:22.808Z - info: Using extension chrome-pdf@4.4.0
+2026-04-20T03:08:22.813Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-04-20T03:08:22.814Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-04-20T03:08:22.816Z - info: Using extension docx@4.10.1
+2026-04-20T03:08:22.821Z - info: Using extension html-to-xlsx@4.4.0
+2026-04-20T03:08:23.267Z - info: html-to-xlsx detected chrome as available html engine
+2026-04-20T03:08:23.268Z - info: Using extension pptx@4.5.0
+2026-04-20T03:08:23.274Z - info: Using extension scheduling@4.2.0
+2026-04-20T03:08:23.313Z - info: Using extension scripts@4.3.0
+2026-04-20T03:08:23.315Z - info: Using extension static-pdf@4.2.0
+2026-04-20T03:08:23.317Z - info: Using extension studio@4.4.1
+2026-04-20T03:08:23.476Z - info: Using extension xlsx@4.6.1
+2026-04-20T03:08:23.479Z - info: Using extension public-templates@4.1.0
+2026-04-20T03:08:23.482Z - debug: Extension public-templates@4.1.0 was disabled
+2026-04-20T03:08:23.483Z - info: Using extension sample-template@4.1.0
+2026-04-20T03:08:23.487Z - info: Using extension studio-theme-dark@4.1.0
+2026-04-20T03:08:23.490Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T03:08:23.491Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T03:08:23.513Z - debug: studio default theme is: light
+2026-04-20T03:08:23.519Z - info: Creating default express app.
+2026-04-20T03:08:23.543Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:08:23.544Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:17:06.687Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T03:17:06.693Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T03:17:06.705Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T03:17:06.735Z - info: Found 35 extension(s)
+2026-04-20T03:17:06.835Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T03:17:06.844Z - debug: Discovered 35 extensions
+2026-04-20T03:17:06.949Z - info: Using extension authentication@4.3.1
+2026-04-20T03:17:07.635Z - debug: Extension authentication@4.3.1 was disabled
+2026-04-20T03:17:07.637Z - info: Using extension base@4.1.0
+2026-04-20T03:17:07.642Z - info: Using extension child-templates@4.2.0
+2026-04-20T03:17:07.644Z - info: Using extension cli@4.2.0
+2026-04-20T03:17:07.651Z - info: Using extension components@4.1.0
+2026-04-20T03:17:07.654Z - info: Using extension data@4.2.0
+2026-04-20T03:17:07.656Z - info: Using extension express@4.3.1
+2026-04-20T03:17:08.326Z - info: Using extension freeze@4.1.0
+2026-04-20T03:17:08.329Z - info: Using extension fs-store@4.2.0
+2026-04-20T03:17:08.539Z - debug: Extension fs-store@4.2.0 was disabled
+2026-04-20T03:17:08.540Z - info: Using extension handlebars@4.1.0
+2026-04-20T03:17:08.543Z - info: Using extension import-export@4.1.0
+2026-04-20T03:17:08.567Z - info: Using extension jsrender@4.1.0
+2026-04-20T03:17:08.569Z - info: Using extension licensing@4.1.0
+2026-04-20T03:17:08.636Z - info: Using extension localization@4.1.0
+2026-04-20T03:17:08.638Z - info: Using extension npm@4.1.0
+2026-04-20T03:17:08.644Z - info: Using extension pdf-utils@4.5.3
+2026-04-20T03:17:08.650Z - info: Using extension reports@4.3.0
+2026-04-20T03:17:08.655Z - info: Using extension tags@4.1.0
+2026-04-20T03:17:08.658Z - info: Using extension text@4.1.0
+2026-04-20T03:17:08.659Z - info: Using extension version-control@4.2.1
+2026-04-20T03:17:08.683Z - info: Using extension assets@4.3.0
+2026-04-20T03:17:08.704Z - info: Using extension authorization@4.2.0
+2026-04-20T03:17:08.713Z - debug: Extension authorization@4.2.0 was disabled
+2026-04-20T03:17:08.714Z - info: Using extension browser-client@4.2.0
+2026-04-20T03:17:08.719Z - info: Using extension chrome-pdf@4.4.0
+2026-04-20T03:17:08.724Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-04-20T03:17:08.725Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-04-20T03:17:08.725Z - info: Using extension docx@4.10.1
+2026-04-20T03:17:08.730Z - info: Using extension html-to-xlsx@4.4.0
+2026-04-20T03:17:09.133Z - info: html-to-xlsx detected chrome as available html engine
+2026-04-20T03:17:09.134Z - info: Using extension pptx@4.5.0
+2026-04-20T03:17:09.138Z - info: Using extension scheduling@4.2.0
+2026-04-20T03:17:09.183Z - info: Using extension scripts@4.3.0
+2026-04-20T03:17:09.185Z - info: Using extension static-pdf@4.2.0
+2026-04-20T03:17:09.187Z - info: Using extension studio@4.4.1
+2026-04-20T03:17:09.351Z - info: Using extension xlsx@4.6.1
+2026-04-20T03:17:09.356Z - info: Using extension public-templates@4.1.0
+2026-04-20T03:17:09.360Z - debug: Extension public-templates@4.1.0 was disabled
+2026-04-20T03:17:09.362Z - info: Using extension sample-template@4.1.0
+2026-04-20T03:17:09.367Z - info: Using extension studio-theme-dark@4.1.0
+2026-04-20T03:17:09.370Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T03:17:09.371Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T03:17:09.388Z - debug: studio default theme is: light
+2026-04-20T03:17:09.395Z - info: Creating default express app.
+2026-04-20T03:17:09.419Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T03:17:09.419Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T04:29:34.237Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T04:29:34.272Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T04:29:34.274Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T04:29:34.344Z - info: Initializing worker threads
+2026-04-20T04:29:34.345Z - debug: Extensions in workers: 
+2026-04-20T04:29:34.852Z - info: 2 worker threads initialized in 508ms
+2026-04-20T04:29:34.853Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T04:29:34.854Z - info: reporter initialized
+2026-04-20T04:29:34.949Z - info: Render request 1 queued for execution and waiting for available worker rootId=cgqyng2nv9hr7wa, id=cgqyng2nv9hr7wa
+2026-04-20T04:29:34.958Z - info: Starting rendering request 1 rootId=cgqyng2nv9hr7wa, id=cgqyng2nv9hr7wa
+2026-04-20T04:29:34.959Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=cgqyng2nv9hr7wa, id=cgqyng2nv9hr7wa
+2026-04-20T04:29:34.959Z - debug: Rendering engine none rootId=cgqyng2nv9hr7wa, id=cgqyng2nv9hr7wa
+2026-04-20T04:29:35.454Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=cgqyng2nv9hr7wa, id=cgqyng2nv9hr7wa
+2026-04-20T04:29:35.455Z - warn: Rendering request 1 finished with error in 511 ms rootId=cgqyng2nv9hr7wa, id=cgqyng2nv9hr7wa
+2026-04-20T04:36:56.343Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T04:36:56.374Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T04:36:56.376Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T04:36:56.423Z - info: Initializing worker threads
+2026-04-20T04:36:56.424Z - debug: Extensions in workers: 
+2026-04-20T04:36:56.875Z - info: 2 worker threads initialized in 452ms
+2026-04-20T04:36:56.876Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T04:36:56.878Z - info: reporter initialized
+2026-04-20T04:36:56.910Z - info: Render request 1 queued for execution and waiting for available worker rootId=73w315uwdasu7kz, id=73w315uwdasu7kz
+2026-04-20T04:36:56.919Z - info: Starting rendering request 1 rootId=73w315uwdasu7kz, id=73w315uwdasu7kz
+2026-04-20T04:36:56.921Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=73w315uwdasu7kz, id=73w315uwdasu7kz
+2026-04-20T04:36:56.921Z - debug: Rendering engine none rootId=73w315uwdasu7kz, id=73w315uwdasu7kz
+2026-04-20T04:36:57.317Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=73w315uwdasu7kz, id=73w315uwdasu7kz
+2026-04-20T04:36:57.317Z - warn: Rendering request 1 finished with error in 410 ms rootId=73w315uwdasu7kz, id=73w315uwdasu7kz
+2026-04-20T05:09:09.317Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T05:09:09.354Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T05:09:09.357Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T05:09:09.402Z - info: Initializing worker threads
+2026-04-20T05:09:09.403Z - debug: Extensions in workers: 
+2026-04-20T05:09:10.268Z - info: 2 worker threads initialized in 866ms
+2026-04-20T05:09:10.277Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T05:09:10.282Z - info: reporter initialized
+2026-04-20T05:09:10.429Z - info: Render request 1 queued for execution and waiting for available worker rootId=bpl9w9bon5wdy52, id=bpl9w9bon5wdy52
+2026-04-20T05:09:10.446Z - info: Starting rendering request 1 rootId=bpl9w9bon5wdy52, id=bpl9w9bon5wdy52
+2026-04-20T05:09:10.447Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=bpl9w9bon5wdy52, id=bpl9w9bon5wdy52
+2026-04-20T05:09:10.448Z - debug: Rendering engine none rootId=bpl9w9bon5wdy52, id=bpl9w9bon5wdy52
+2026-04-20T05:09:11.251Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=bpl9w9bon5wdy52, id=bpl9w9bon5wdy52
+2026-04-20T05:09:11.252Z - warn: Rendering request 1 finished with error in 827 ms rootId=bpl9w9bon5wdy52, id=bpl9w9bon5wdy52
+2026-04-20T05:09:42.079Z - info: Render request 2 queued for execution and waiting for available worker rootId=c9mspgr8lmxqah6, id=c9mspgr8lmxqah6
+2026-04-20T05:09:42.087Z - info: Starting rendering request 2 rootId=c9mspgr8lmxqah6, id=c9mspgr8lmxqah6
+2026-04-20T05:09:42.089Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=c9mspgr8lmxqah6, id=c9mspgr8lmxqah6
+2026-04-20T05:09:42.090Z - debug: Rendering engine none rootId=c9mspgr8lmxqah6, id=c9mspgr8lmxqah6
+2026-04-20T05:09:43.354Z - warn: Error when processing render request 2
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=c9mspgr8lmxqah6, id=c9mspgr8lmxqah6
+2026-04-20T05:09:43.355Z - warn: Rendering request 2 finished with error in 1279 ms rootId=c9mspgr8lmxqah6, id=c9mspgr8lmxqah6
+2026-04-20T05:20:34.879Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T05:20:34.883Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T05:20:34.903Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T05:20:34.938Z - info: Found 35 extension(s)
+2026-04-20T05:20:35.097Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T05:20:35.102Z - debug: Discovered 35 extensions
+2026-04-20T05:20:35.202Z - info: Using extension authentication@4.3.1
+2026-04-20T05:20:36.144Z - debug: Extension authentication@4.3.1 was disabled
+2026-04-20T05:20:36.145Z - info: Using extension base@4.1.0
+2026-04-20T05:20:36.152Z - info: Using extension child-templates@4.2.0
+2026-04-20T05:20:36.157Z - info: Using extension cli@4.2.0
+2026-04-20T05:20:36.172Z - info: Using extension components@4.1.0
+2026-04-20T05:20:36.178Z - info: Using extension data@4.2.0
+2026-04-20T05:20:36.181Z - info: Using extension express@4.3.1
+2026-04-20T05:20:37.878Z - info: Using extension freeze@4.1.0
+2026-04-20T05:20:37.884Z - info: Using extension fs-store@4.2.0
+2026-04-20T05:20:38.586Z - debug: Extension fs-store@4.2.0 was disabled
+2026-04-20T05:20:38.586Z - info: Using extension handlebars@4.1.0
+2026-04-20T05:20:38.591Z - info: Using extension import-export@4.1.0
+2026-04-20T05:20:38.644Z - info: Using extension jsrender@4.1.0
+2026-04-20T05:20:38.648Z - info: Using extension licensing@4.1.0
+2026-04-20T05:20:38.809Z - info: Using extension localization@4.1.0
+2026-04-20T05:20:38.812Z - info: Using extension npm@4.1.0
+2026-04-20T05:20:38.819Z - info: Using extension pdf-utils@4.5.3
+2026-04-20T05:20:38.827Z - info: Using extension reports@4.3.0
+2026-04-20T05:20:38.837Z - info: Using extension tags@4.1.0
+2026-04-20T05:20:38.843Z - info: Using extension text@4.1.0
+2026-04-20T05:20:38.846Z - info: Using extension version-control@4.2.1
+2026-04-20T05:20:38.897Z - info: Using extension assets@4.3.0
+2026-04-20T05:20:38.955Z - info: Using extension authorization@4.2.0
+2026-04-20T05:20:38.976Z - debug: Extension authorization@4.2.0 was disabled
+2026-04-20T05:20:38.976Z - info: Using extension browser-client@4.2.0
+2026-04-20T05:20:38.989Z - info: Using extension chrome-pdf@4.4.0
+2026-04-20T05:20:39.002Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-04-20T05:20:39.004Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox, protocolTimeout=60000
+2026-04-20T05:20:39.005Z - info: Using extension docx@4.10.1
+2026-04-20T05:20:39.026Z - info: Using extension html-to-xlsx@4.4.0
+2026-04-20T05:20:40.058Z - info: html-to-xlsx detected chrome as available html engine
+2026-04-20T05:20:40.059Z - info: Using extension pptx@4.5.0
+2026-04-20T05:20:40.066Z - info: Using extension scheduling@4.2.0
+2026-04-20T05:20:40.143Z - info: Using extension scripts@4.3.0
+2026-04-20T05:20:40.147Z - info: Using extension static-pdf@4.2.0
+2026-04-20T05:20:40.150Z - info: Using extension studio@4.4.1
+2026-04-20T05:20:40.462Z - info: Using extension xlsx@4.6.1
+2026-04-20T05:20:40.469Z - info: Using extension public-templates@4.1.0
+2026-04-20T05:20:40.473Z - debug: Extension public-templates@4.1.0 was disabled
+2026-04-20T05:20:40.474Z - info: Using extension sample-template@4.1.0
+2026-04-20T05:20:40.480Z - info: Using extension studio-theme-dark@4.1.0
+2026-04-20T05:20:40.484Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T05:20:40.485Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T05:20:40.508Z - debug: studio default theme is: light
+2026-04-20T05:20:40.514Z - info: Creating default express app.
+2026-04-20T05:20:40.598Z - error: Error when starting http server on port 3001 Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:20:40.599Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:23:22.396Z - info: Initializing jsreport (version: 4.12.0, configuration file: none, nodejs: 24.13.0)
+2026-04-20T05:23:22.474Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T05:23:22.476Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T05:23:22.559Z - info: Initializing worker threads
+2026-04-20T05:23:22.560Z - debug: Extensions in workers: 
+2026-04-20T05:23:23.210Z - info: 2 worker threads initialized in 652ms
+2026-04-20T05:23:23.211Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T05:23:23.212Z - info: reporter initialized
+2026-04-20T05:23:23.323Z - info: Render request 1 queued for execution and waiting for available worker rootId=1n7zohxqjzpyds2, id=1n7zohxqjzpyds2
+2026-04-20T05:23:23.335Z - info: Starting rendering request 1 rootId=1n7zohxqjzpyds2, id=1n7zohxqjzpyds2
+2026-04-20T05:23:23.336Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=1n7zohxqjzpyds2, id=1n7zohxqjzpyds2
+2026-04-20T05:23:23.336Z - debug: Rendering engine none rootId=1n7zohxqjzpyds2, id=1n7zohxqjzpyds2
+2026-04-20T05:23:23.954Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+  at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+  at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+  at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:80:22)
+  at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:148:7)
+  at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+  at async processAndResponse (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=1n7zohxqjzpyds2, id=1n7zohxqjzpyds2
+2026-04-20T05:23:23.955Z - warn: Rendering request 1 finished with error in 638 ms rootId=1n7zohxqjzpyds2, id=1n7zohxqjzpyds2
+2026-04-20T05:34:42.503Z - info: Initializing jsreport (version: 3.11.2, configuration file: none, nodejs: 24.13.0)
+2026-04-20T05:34:42.624Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T05:34:42.634Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T05:34:42.762Z - info: Initializing worker threads
+2026-04-20T05:34:42.764Z - debug: Extensions in workers: 
+2026-04-20T05:34:43.264Z - info: 2 worker threads initialized in 502ms
+2026-04-20T05:34:43.266Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T05:34:43.267Z - info: reporter initialized
+2026-04-20T05:34:43.319Z - info: Render request 1 queued for execution and waiting for available worker rootId=x48oymhnkr6r21e, id=x48oymhnkr6r21e
+2026-04-20T05:34:43.354Z - info: Starting rendering request 1 rootId=x48oymhnkr6r21e, id=x48oymhnkr6r21e
+2026-04-20T05:34:43.355Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=x48oymhnkr6r21e, id=x48oymhnkr6r21e
+2026-04-20T05:34:43.356Z - debug: Rendering engine none rootId=x48oymhnkr6r21e, id=x48oymhnkr6r21e
+2026-04-20T05:34:44.147Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+    at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+    at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:49:12)
+    at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:82:22)
+    at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:147:7)
+    at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:179:19
+    at async Domain.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:141:19) rootId=x48oymhnkr6r21e, id=x48oymhnkr6r21e
+2026-04-20T05:34:44.148Z - warn: Rendering request 1 finished with error in 835 ms rootId=x48oymhnkr6r21e, id=x48oymhnkr6r21e
+2026-04-20T05:36:20.882Z - info: Initializing jsreport (version: 3.11.2, configuration file: none, nodejs: 24.13.0)
+2026-04-20T05:36:20.922Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T05:36:20.924Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T05:36:21.016Z - info: Initializing worker threads
+2026-04-20T05:36:21.018Z - debug: Extensions in workers: 
+2026-04-20T05:36:21.634Z - info: 2 worker threads initialized in 618ms
+2026-04-20T05:36:21.636Z - info: Starting temp files cleanup with 180000ms threshold
+2026-04-20T05:36:21.638Z - info: reporter initialized
+2026-04-20T05:36:21.694Z - info: Render request 1 queued for execution and waiting for available worker rootId=ixdhqmak87vsxrn, id=ixdhqmak87vsxrn
+2026-04-20T05:36:21.715Z - info: Starting rendering request 1 rootId=ixdhqmak87vsxrn, id=ixdhqmak87vsxrn
+2026-04-20T05:36:21.716Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: none } rootId=ixdhqmak87vsxrn, id=ixdhqmak87vsxrn
+2026-04-20T05:36:21.717Z - debug: Rendering engine none rootId=ixdhqmak87vsxrn, id=ixdhqmak87vsxrn
+2026-04-20T05:36:22.383Z - warn: Error when processing render request 1
+(because) recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+Error: Recipe 'chrome-pdf' not found. If this is a custom recipe make sure it's properly installed from npm.
+    at module.exports (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+    at WorkerReporter.createError (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:49:12)
+    at invokeRender (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:82:22)
+    at async WorkerReporter._render (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:147:7)
+    at async C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:179:19
+    at async Domain.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:141:19) rootId=ixdhqmak87vsxrn, id=ixdhqmak87vsxrn
+2026-04-20T05:36:22.383Z - warn: Rendering request 1 finished with error in 694 ms rootId=ixdhqmak87vsxrn, id=ixdhqmak87vsxrn
+2026-04-20T05:36:46.457Z - info: Initializing jsreport (version: 3.11.2, configuration file: none, nodejs: 24.13.0)
+2026-04-20T05:36:46.463Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T05:36:46.479Z - info: Extensions location cache C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2026-04-20T05:36:59.033Z - info: Found 35 extension(s)
+2026-04-20T05:36:59.233Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T05:36:59.242Z - debug: Discovered 35 extensions
+2026-04-20T05:36:59.435Z - info: Using extension authentication@3.4.0
+2026-04-20T05:37:00.188Z - debug: Extension authentication@3.4.0 was disabled
+2026-04-20T05:37:00.190Z - info: Using extension base@3.0.1
+2026-04-20T05:37:00.197Z - info: Using extension child-templates@3.1.0
+2026-04-20T05:37:00.203Z - info: Using extension cli@3.2.3
+2026-04-20T05:37:00.215Z - info: Using extension components@3.3.0
+2026-04-20T05:37:00.221Z - info: Using extension data@3.1.0
+2026-04-20T05:37:00.224Z - info: Using extension express@3.7.1
+2026-04-20T05:37:01.160Z - info: Using extension freeze@3.0.1
+2026-04-20T05:37:01.165Z - info: Using extension fs-store@3.2.4
+2026-04-20T05:37:01.444Z - debug: Extension fs-store@3.2.4 was disabled
+2026-04-20T05:37:01.445Z - info: Using extension handlebars@3.2.1
+2026-04-20T05:37:01.450Z - info: Using extension import-export@3.2.0
+2026-04-20T05:37:01.486Z - info: Using extension jsrender@3.0.0
+2026-04-20T05:37:01.488Z - info: Using extension licensing@3.0.3
+2026-04-20T05:37:01.549Z - info: Using extension localization@3.2.2
+2026-04-20T05:37:01.552Z - info: Using extension npm@3.1.2
+2026-04-20T05:37:01.565Z - info: Using extension pdf-utils@3.9.0
+2026-04-20T05:37:01.571Z - info: Using extension reports@3.1.1
+2026-04-20T05:37:01.578Z - info: Using extension tags@3.1.1
+2026-04-20T05:37:01.584Z - info: Using extension text@3.0.0
+2026-04-20T05:37:01.586Z - info: Using extension version-control@3.1.2
+2026-04-20T05:37:01.620Z - info: Using extension assets@3.6.0
+2026-04-20T05:37:01.713Z - info: Using extension authorization@3.3.0
+2026-04-20T05:37:01.731Z - debug: Extension authorization@3.3.0 was disabled
+2026-04-20T05:37:01.734Z - info: Using extension browser-client@3.1.1
+2026-04-20T05:37:01.749Z - info: Using extension chrome-pdf@3.2.0
+2026-04-20T05:37:01.758Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-04-20T05:37:01.760Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox
+2026-04-20T05:37:01.762Z - info: Using extension docx@3.7.0
+2026-04-20T05:37:01.779Z - info: Using extension html-to-xlsx@3.3.1
+2026-04-20T05:37:02.917Z - info: html-to-xlsx detected chrome as available html engine
+2026-04-20T05:37:02.921Z - info: Using extension pptx@3.4.0
+2026-04-20T05:37:02.934Z - info: Using extension scheduling@3.0.3
+2026-04-20T05:37:03.562Z - info: Using extension scripts@3.4.1
+2026-04-20T05:37:03.566Z - info: Using extension static-pdf@3.0.1
+2026-04-20T05:37:03.570Z - info: Using extension studio@3.9.1
+2026-04-20T05:37:04.047Z - info: Using extension xlsx@3.4.0
+2026-04-20T05:37:04.116Z - info: Using extension public-templates@3.0.0
+2026-04-20T05:37:04.120Z - debug: Extension public-templates@3.0.0 was disabled
+2026-04-20T05:37:04.121Z - info: Using extension sample-template@3.2.1
+2026-04-20T05:37:04.126Z - info: Using extension studio-theme-dark@3.0.1
+2026-04-20T05:37:04.130Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T05:37:04.131Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T05:37:04.159Z - debug: studio default theme is: light
+2026-04-20T05:37:04.180Z - info: Creating default express app.
+2026-04-20T05:37:04.220Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:37:04.221Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:37:55.416Z - info: Initializing jsreport (version: 3.11.2, configuration file: none, nodejs: 24.13.0)
+2026-04-20T05:37:55.422Z - info: Searching for available extensions in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T05:37:55.437Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\
+2026-04-20T05:37:55.488Z - info: Found 35 extension(s)
+2026-04-20T05:37:55.675Z - debug: Writing extension locations cache to C:\Users\Roberto\AppData\Local\Temp\jsreport\core\locations.json
+2026-04-20T05:37:55.683Z - debug: Discovered 35 extensions
+2026-04-20T05:37:55.954Z - info: Using extension authentication@3.4.0
+2026-04-20T05:37:56.550Z - debug: Extension authentication@3.4.0 was disabled
+2026-04-20T05:37:56.552Z - info: Using extension base@3.0.1
+2026-04-20T05:37:56.558Z - info: Using extension child-templates@3.1.0
+2026-04-20T05:37:56.563Z - info: Using extension cli@3.2.3
+2026-04-20T05:37:56.572Z - info: Using extension components@3.3.0
+2026-04-20T05:37:56.578Z - info: Using extension data@3.1.0
+2026-04-20T05:37:56.582Z - info: Using extension express@3.7.1
+2026-04-20T05:37:57.519Z - info: Using extension freeze@3.0.1
+2026-04-20T05:37:57.523Z - info: Using extension fs-store@3.2.4
+2026-04-20T05:37:57.954Z - debug: Extension fs-store@3.2.4 was disabled
+2026-04-20T05:37:57.955Z - info: Using extension handlebars@3.2.1
+2026-04-20T05:37:57.958Z - info: Using extension import-export@3.2.0
+2026-04-20T05:37:57.998Z - info: Using extension jsrender@3.0.0
+2026-04-20T05:37:58.001Z - info: Using extension licensing@3.0.3
+2026-04-20T05:37:58.073Z - info: Using extension localization@3.2.2
+2026-04-20T05:37:58.076Z - info: Using extension npm@3.1.2
+2026-04-20T05:37:58.085Z - info: Using extension pdf-utils@3.9.0
+2026-04-20T05:37:58.089Z - info: Using extension reports@3.1.1
+2026-04-20T05:37:58.094Z - info: Using extension tags@3.1.1
+2026-04-20T05:37:58.099Z - info: Using extension text@3.0.0
+2026-04-20T05:37:58.103Z - info: Using extension version-control@3.1.2
+2026-04-20T05:37:58.134Z - info: Using extension assets@3.6.0
+2026-04-20T05:37:58.169Z - info: Using extension authorization@3.3.0
+2026-04-20T05:37:58.178Z - debug: Extension authorization@3.3.0 was disabled
+2026-04-20T05:37:58.180Z - info: Using extension browser-client@3.1.1
+2026-04-20T05:37:58.185Z - info: Using extension chrome-pdf@3.2.0
+2026-04-20T05:37:58.191Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-04-20T05:37:58.191Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-setuid-sandbox
+2026-04-20T05:37:58.193Z - info: Using extension docx@3.7.0
+2026-04-20T05:37:58.198Z - info: Using extension html-to-xlsx@3.3.1
+2026-04-20T05:37:58.961Z - info: html-to-xlsx detected chrome as available html engine
+2026-04-20T05:37:58.962Z - info: Using extension pptx@3.4.0
+2026-04-20T05:37:58.968Z - info: Using extension scheduling@3.0.3
+2026-04-20T05:37:59.015Z - info: Using extension scripts@3.4.1
+2026-04-20T05:37:59.019Z - info: Using extension static-pdf@3.0.1
+2026-04-20T05:37:59.021Z - info: Using extension studio@3.9.1
+2026-04-20T05:37:59.318Z - info: Using extension xlsx@3.4.0
+2026-04-20T05:37:59.382Z - info: Using extension public-templates@3.0.0
+2026-04-20T05:37:59.385Z - debug: Extension public-templates@3.0.0 was disabled
+2026-04-20T05:37:59.386Z - info: Using extension sample-template@3.2.1
+2026-04-20T05:37:59.391Z - info: Using extension studio-theme-dark@3.0.1
+2026-04-20T05:37:59.394Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-04-20T05:37:59.395Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-04-20T05:37:59.424Z - debug: studio default theme is: light
+2026-04-20T05:37:59.466Z - info: Creating default express app.
+2026-04-20T05:37:59.547Z - error: Error when starting http server on port 3000 Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)
+2026-04-20T05:37:59.548Z - error: Error occurred during reporter init: Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:22:12
+    at new Promise (<anonymous>)
+    at startAsync (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:16:10)
+    at C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:50:14
+    at Object.start (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:125:13)
+    at Object.<anonymous> (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-express\lib\main.js:333:30)
+    at async ListenerCollection.fire (C:\Users\Roberto\Documents\cursos\unt\software\s01_mantenedor\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:21)

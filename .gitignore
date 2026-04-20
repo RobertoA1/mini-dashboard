@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.env
+public/css/tailwind.css
+public/js/bundle.js
