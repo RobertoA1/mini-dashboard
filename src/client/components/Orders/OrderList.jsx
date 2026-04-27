@@ -12,6 +12,10 @@ const OrderList = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [estadoFiltro, setEstadoFiltro] = useState('TODOS');
+    const [nombreFiltro, setNombreFiltro] = useState('');
+    const [apellidoFiltro, setApellidoFiltro] = useState('');
+    const [fechaDesdeFiltro, setFechaDesdeFiltro] = useState('');
+    const [fechaHastaFiltro, setFechaHastaFiltro] = useState('');
     const [pagina, setPagina] = useState(1);
     const [totalPaginas, setTotalPaginas] = useState(1);
     const [total, setTotal] = useState(0);
@@ -21,6 +25,10 @@ const OrderList = () => {
         try {
             const params = new URLSearchParams();
             if (estadoFiltro !== 'TODOS') params.append('estado', estadoFiltro);
+            if (nombreFiltro.trim()) params.append('nombre', nombreFiltro.trim());
+            if (apellidoFiltro.trim()) params.append('apellido', apellidoFiltro.trim());
+            if (fechaDesdeFiltro) params.append('fechaDesde', fechaDesdeFiltro);
+            if (fechaHastaFiltro) params.append('fechaHasta', fechaHastaFiltro);
             params.append('page', pagina);
             params.append('limit', 10);
 
@@ -38,9 +46,31 @@ const OrderList = () => {
         }
     };
 
+    // Solo estado y pagina activan busqueda automatica
+    // Los filtros de texto/fecha requieren presionar Enter
     useEffect(() => {
         cargarOrdenes();
     }, [estadoFiltro, pagina]);
+
+    const handleBuscar = () => {
+        setPagina(1);
+        cargarOrdenes();
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            handleBuscar();
+        }
+    };
+
+    const limpiarFiltros = () => {
+        setEstadoFiltro('TODOS');
+        setNombreFiltro('');
+        setApellidoFiltro('');
+        setFechaDesdeFiltro('');
+        setFechaHastaFiltro('');
+        setPagina(1);
+    };
 
     const getEstadoColor = (estado) => {
         switch (estado) {
@@ -87,10 +117,11 @@ const OrderList = () => {
 
             {/* Filtros */}
             <div className="bg-white p-4 rounded-lg shadow mb-6">
-                <div className="flex flex-wrap items-center gap-4">
+                <div className="flex flex-wrap items-end gap-4">
+                    {/* Filtro por Estado */}
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
-                            Filtrar por Estado
+                            Estado
                         </label>
                         <select
                             value={estadoFiltro}
@@ -105,6 +136,85 @@ const OrderList = () => {
                             ))}
                         </select>
                     </div>
+
+                    {/* Filtro por Nombre */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Nombre Cliente
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Ej: Juan"
+                            value={nombreFiltro}
+                            onChange={(e) => setNombreFiltro(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                            className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary w-40"
+                        />
+                    </div>
+
+                    {/* Filtro por Apellido */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Apellido Cliente
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Ej: Pérez"
+                            value={apellidoFiltro}
+                            onChange={(e) => setApellidoFiltro(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                            className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary w-40"
+                        />
+                    </div>
+
+                    {/* Filtro por Fecha Desde */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Fecha Desde
+                        </label>
+                        <input
+                            type="date"
+                            value={fechaDesdeFiltro}
+                            onChange={(e) => setFechaDesdeFiltro(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                            className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary"
+                        />
+                    </div>
+
+                    {/* Filtro por Fecha Hasta */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Fecha Hasta
+                        </label>
+                        <input
+                            type="date"
+                            value={fechaHastaFiltro}
+                            onChange={(e) => setFechaHastaFiltro(e.target.value)}
+                            onKeyDown={handleKeyDown}
+                            className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary"
+                        />
+                    </div>
+
+                    {/* Botón Buscar */}
+                    <div>
+                        <button
+                            onClick={handleBuscar}
+                            className="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-opacity-90"
+                        >
+                            🔍 Buscar
+                        </button>
+                    </div>
+
+                    {/* Botón Limpiar Filtros */}
+                    <div>
+                        <button
+                            onClick={limpiarFiltros}
+                            className="bg-gray-200 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-300"
+                        >
+                            🔄 Limpiar
+                        </button>
+                    </div>
+
                     <div className="ml-auto">
                         <span className="text-gray-600">
                             Total de órdenes: <strong>{total}</strong>

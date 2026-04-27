@@ -152,11 +152,34 @@ exports.getUserOrders = async (usuarioId) => {
 };
 
 // Admin: Obtener todas las órdenes con filtros
-exports.getAllOrders = async ({ estado, page = 1, limit = 20 }) => {
+exports.getAllOrders = async ({ estado, nombre, apellido, fechaDesde, fechaHasta, page = 1, limit = 20 }) => {
     const where = {};
     
     if (estado && estado !== 'TODOS') {
         where.estado = estado;
+    }
+
+    // Filtro por fechas de creación
+    if (fechaDesde || fechaHasta) {
+        where.fecha_creacion = {};
+        if (fechaDesde) {
+            where.fecha_creacion[Op.gte] = new Date(fechaDesde);
+        }
+        if (fechaHasta) {
+            // Ajustar fecha hasta al final del día
+            const fechaHastaObj = new Date(fechaHasta);
+            fechaHastaObj.setHours(23, 59, 59, 999);
+            where.fecha_creacion[Op.lte] = fechaHastaObj;
+        }
+    }
+
+    // Construir condiciones de inclusión para Usuario (nombre/apellido)
+    const usuarioWhere = {};
+    if (nombre && nombre.trim()) {
+        usuarioWhere.nombre = { [Op.iLike]: `%${nombre.trim()}%` };
+    }
+    if (apellido && apellido.trim()) {
+        usuarioWhere.apellido = { [Op.iLike]: `%${apellido.trim()}%` };
     }
 
     const offset = (page - 1) * limit;
@@ -167,7 +190,9 @@ exports.getAllOrders = async ({ estado, page = 1, limit = 20 }) => {
             {
                 model: Usuario,
                 as: 'usuario',
-                attributes: ['id', 'nombre', 'apellido', 'correo']
+                attributes: ['id', 'nombre', 'apellido', 'correo'],
+                where: Object.keys(usuarioWhere).length > 0 ? usuarioWhere : undefined,
+                required: Object.keys(usuarioWhere).length > 0 // INNER JOIN si hay filtros de usuario
             },
             {
                 model: OrdenItem,

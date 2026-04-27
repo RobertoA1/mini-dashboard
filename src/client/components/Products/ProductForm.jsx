@@ -8,23 +8,90 @@ import Alert from '../common/Alert';
 const ImageManager = ({ productId, images, onImagesChange }) => {
     const [newImageUrl, setNewImageUrl] = useState('');
     const [newImageType, setNewImageType] = useState('detail');
+    const [uploadMode, setUploadMode] = useState('url'); // 'url' o 'file'
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [previewUrl, setPreviewUrl] = useState('');
     const [loading, setLoading] = useState(false);
+    const fileInputRef = React.useRef(null);
 
-    const handleAddImage = async () => {
-        if (!newImageUrl.trim()) return;
+    const handleFileSelect = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        // Validar tipo de archivo
+        const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+        if (!allowedTypes.includes(file.type)) {
+            alert('Solo se permiten imágenes (JPEG, PNG, WebP, GIF)');
+            return;
+        }
+        
+        // Validar tamaño (5MB)
+        if (file.size > 5 * 1024 * 1024) {
+            alert('El archivo es demasiado grande. Máximo 5MB.');
+            return;
+        }
+        
+        setSelectedFile(file);
+        setPreviewUrl(URL.createObjectURL(file));
+    };
+
+    const uploadImageFile = async () => {
+        if (!selectedFile) return;
+        
         setLoading(true);
+        const formData = new FormData();
+        formData.append('image', selectedFile);
+        
         try {
+            // Subir archivo al servidor
+            const uploadRes = await api.post('/upload', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            
+            // Agregar imagen al producto con la URL devuelta
             const res = await api.post(`/productos/${productId}/images`, {
-                url: newImageUrl,
+                url: uploadRes.data.url,
                 tipo: newImageType,
                 orden: images.length
             });
+            
             onImagesChange([...images, res.data]);
-            setNewImageUrl('');
+            
+            // Limpiar estado
+            setSelectedFile(null);
+            setPreviewUrl('');
+            if (fileInputRef.current) {
+                fileInputRef.current.value = '';
+            }
         } catch (err) {
-            alert('Error al agregar imagen: ' + (err.response?.data?.error || err.message));
+            alert('Error al subir imagen: ' + (err.response?.data?.error || err.message));
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handleAddImage = async () => {
+        if (uploadMode === 'file') {
+            await uploadImageFile();
+        } else {
+            // Modo URL
+            if (!newImageUrl.trim()) return;
+            setLoading(true);
+            try {
+                const res = await api.post(`/productos/${productId}/images`, {
+                    url: newImageUrl,
+                    tipo: newImageType,
+                    orden: images.length
+                });
+                onImagesChange([...images, res.data]);
+                setNewImageUrl('');
+            } catch (err) {
+                alert('Error al agregar imagen: ' + (err.response?.data?.error || err.message));
+            } finally {
+                setLoading(false);
+            }
         }
     };
 
@@ -87,31 +154,98 @@ const ImageManager = ({ productId, images, onImagesChange }) => {
                 )}
             </div>
 
-            {/* Agregar nueva imagen */}
-            <div className="flex gap-2">
-                <input
-                    type="text"
-                    placeholder="URL de la imagen"
-                    value={newImageUrl}
-                    onChange={(e) => setNewImageUrl(e.target.value)}
-                    className="flex-1 border rounded px-3 py-2 text-sm"
-                />
-                <select
-                    value={newImageType}
-                    onChange={(e) => setNewImageType(e.target.value)}
-                    className="border rounded px-3 py-2 text-sm"
-                >
-                    <option value="card">Card</option>
-                    <option value="detail">Detalle</option>
-                </select>
+            {/* Selector de modo */}
+            <div className="flex gap-2 mb-3">
                 <button
-                    onClick={handleAddImage}
-                    disabled={loading || !newImageUrl.trim()}
-                    className="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 disabled:opacity-50"
+                    type="button"
+                    onClick={() => setUploadMode('url')}
+                    className={`px-3 py-1 rounded text-sm ${uploadMode === 'url' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'}`}
                 >
-                    {loading ? '...' : 'Agregar'}
+                    📎 URL Externa
+                </button>
+                <button
+                    type="button"
+                    onClick={() => setUploadMode('file')}
+                    className={`px-3 py-1 rounded text-sm ${uploadMode === 'file' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'}`}
+                >
+                    📁 Subir Archivo
                 </button>
             </div>
+
+            {/* Agregar nueva imagen - Modo URL */}
+            {uploadMode === 'url' && (
+                <div className="flex gap-2">
+                    <input
+                        type="text"
+                        placeholder="URL de la imagen (ej: https://ejemplo.com/imagen.jpg)"
+                        value={newImageUrl}
+                        onChange={(e) => setNewImageUrl(e.target.value)}
+                        className="flex-1 border rounded px-3 py-2 text-sm"
+                    />
+                    <select
+                        value={newImageType}
+                        onChange={(e) => setNewImageType(e.target.value)}
+                        className="border rounded px-3 py-2 text-sm"
+                    >
+                        <option value="card">Card</option>
+                        <option value="detail">Detalle</option>
+                    </select>
+                    <button
+                        onClick={handleAddImage}
+                        disabled={loading || !newImageUrl.trim()}
+                        className="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 disabled:opacity-50"
+                    >
+                        {loading ? '...' : 'Agregar'}
+                    </button>
+                </div>
+            )}
+
+            {/* Agregar nueva imagen - Modo Archivo */}
+            {uploadMode === 'file' && (
+                <div className="flex flex-col gap-2">
+                    <div className="flex gap-2 items-start">
+                        <div className="flex-1">
+                            <input
+                                ref={fileInputRef}
+                                type="file"
+                                accept="image/jpeg,image/png,image/webp,image/gif"
+                                onChange={handleFileSelect}
+                                className="w-full border rounded px-3 py-2 text-sm"
+                            />
+                            <p className="text-xs text-gray-500 mt-1">
+                                Máximo 5MB. Formatos: JPEG, PNG, WebP, GIF
+                            </p>
+                        </div>
+                        <select
+                            value={newImageType}
+                            onChange={(e) => setNewImageType(e.target.value)}
+                            className="border rounded px-3 py-2 text-sm"
+                        >
+                            <option value="card">Card</option>
+                            <option value="detail">Detalle</option>
+                        </select>
+                        <button
+                            onClick={handleAddImage}
+                            disabled={loading || !selectedFile}
+                            className="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 disabled:opacity-50"
+                        >
+                            {loading ? '⏳' : '📤 Subir'}
+                        </button>
+                    </div>
+                    
+                    {/* Preview de imagen seleccionada */}
+                    {previewUrl && (
+                        <div className="mt-2">
+                            <p className="text-sm text-gray-600 mb-1">Vista previa:</p>
+                            <img 
+                                src={previewUrl} 
+                                alt="Preview" 
+                                className="h-32 w-auto border rounded object-cover"
+                            />
+                        </div>
+                    )}
+                </div>
+            )}
         </div>
     );
 };

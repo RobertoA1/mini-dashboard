@@ -22,8 +22,16 @@ exports.getUserOrders = async (req, res) => {
 // Admin: Obtener todas las órdenes con filtros
 exports.getAllOrders = async (req, res) => {
     try {
-        const { estado, page, limit } = req.query;
-        const result = await service.getAllOrders({ estado, page, limit });
+        const { estado, nombre, apellido, fechaDesde, fechaHasta, page, limit } = req.query;
+        const result = await service.getAllOrders({ 
+            estado, 
+            nombre, 
+            apellido, 
+            fechaDesde, 
+            fechaHasta,
+            page, 
+            limit 
+        });
         res.json(result);
     } catch (error) {
         res.status(error.statusCode || 500).json({ error: error.message });

@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const multer = require('multer');
+const fs = require('fs');
 const { sequelize } = require('./src/models');
 
 // Importar rutas de slices
@@ -21,12 +23,57 @@ const ordersRoutes = require('./src/slices/orders/orders.routes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Configuración de uploads
+const uploadsDir = path.join(__dirname, 'public', 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, uploadsDir);
+    },
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        const ext = path.extname(file.originalname);
+        cb(null, file.fieldname + '-' + uniqueSuffix + ext);
+    }
+});
+
+const upload = multer({ 
+    storage: storage,
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+    fileFilter: (req, file, cb) => {
+        const allowedMimes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+        if (allowedMimes.includes(file.mimetype)) {
+            cb(null, true);
+        } else {
+            cb(new Error('Solo se permiten imágenes (JPEG, PNG, WebP, GIF)'), false);
+        }
+    }
+});
+
 // Middleware
 app.use(cors({ origin: true, credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Endpoint para subir imágenes
+app.post('/api/upload', upload.single('image'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ error: 'No se proporcionó ninguna imagen' });
+    }
+    // Devolver URL relativa para acceder desde la misma web
+    const imageUrl = '/uploads/' + req.file.filename;
+    res.json({ 
+        success: true, 
+        url: imageUrl,
+        filename: req.file.filename,
+        size: req.file.size
+    });
+});
 
 // Motor de vistas EJS
 app.set('views', path.join(__dirname, 'src', 'views'));
@@ -64,6 +111,17 @@ app.get('/tienda', (req, res) => {
 });
 app.get('/tienda/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'tienda', 'index.html'));
+});
+
+// Manejo de errores de multer
+app.use((err, req, res, next) => {
+    if (err instanceof multer.MulterError) {
+        if (err.code === 'LIMIT_FILE_SIZE') {
+            return res.status(400).json({ error: 'Archivo demasiado grande. Máximo 5MB.' });
+        }
+        return res.status(400).json({ error: err.message });
+    }
+    next(err);
 });
 
 // Ruta SSR para servir la aplicación React
