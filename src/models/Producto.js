@@ -6,6 +6,10 @@ module.exports = (sequelize, DataTypes) => {
         static associate(models) {
             Producto.belongsTo(models.Categoria, { foreignKey: 'categoria', as: 'categoriaRel' });
             Producto.belongsTo(models.Proveedor, { foreignKey: 'proveedor', as: 'proveedorRel' });
+            Producto.hasMany(models.CarritoItem, { foreignKey: 'producto_id', as: 'carritoItems' });
+            Producto.hasMany(models.Compra, { foreignKey: 'producto_id', as: 'compras' });
+            Producto.hasMany(models.ProductImage, { foreignKey: 'product_id', as: 'imagenes' });
+            Producto.hasMany(models.ProductAttribute, { foreignKey: 'product_id', as: 'atributos' });
         }
     }
     Producto.init({
@@ -27,6 +31,33 @@ module.exports = (sequelize, DataTypes) => {
         descripcion: {
             type: DataTypes.TEXT,
             allowNull: false,
+        },
+        descuento_tipo: {
+            type: DataTypes.ENUM('porcentaje', 'monto'),
+            allowNull: true,
+            defaultValue: null,
+        },
+        descuento_valor: {
+            type: DataTypes.DECIMAL(10, 2),
+            allowNull: false,
+            defaultValue: 0,
+            validate: { min: 0 },
+        },
+        cuotas_sin_interes: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
+        },
+        envio_gratis: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
+        },
+        costo_envio: {
+            type: DataTypes.DECIMAL(10, 2),
+            allowNull: false,
+            defaultValue: 0,
+            validate: { min: 0 },
         },
         categoria: {
             type: DataTypes.BIGINT,
@@ -56,6 +87,16 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: 0,
             validate: { min: 0 },
+        },
+        estado: {
+            type: DataTypes.ENUM('Nuevo', 'Usado'),
+            allowNull: false,
+            defaultValue: 'Nuevo',
+        },
+        cantidad_vendidos: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
         },
         proveedor: {
             type: DataTypes.BIGINT,

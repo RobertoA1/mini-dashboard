@@ -1,3 +1,5 @@
+'use strict';
+
 const service = require('./productos.service');
 
 exports.getAll = async (req, res) => {
@@ -91,5 +93,100 @@ exports.getFilterData = async (req, res) => {
         res.json(data);
     } catch (error) {
         res.status(500).json({ error: error.message });
+    }
+};
+
+exports.getPublicCatalog = async (req, res) => {
+    try {
+        const { page = 1, limit = 12, search, categoria } = req.query;
+        const result = await service.getPublicCatalog({ page, limit, search, categoria });
+        res.json(result);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+exports.getPublicById = async (req, res) => {
+    try {
+        const result = await service.getPublicProductoById(req.params.id);
+        if (!result) return res.status(404).json({ error: 'Producto no encontrado' });
+        res.json(result);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+exports.getFeatured = async (req, res) => {
+    try {
+        const result = await service.getFeaturedProducts();
+        res.json({ productos: result });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+// ============ Controladores de Imágenes ============
+exports.addImage = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { url, tipo, orden } = req.body;
+        const result = await service.addProductImage(id, { url, tipo, orden });
+        res.status(201).json(result);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
+exports.deleteImage = async (req, res) => {
+    try {
+        const { imageId } = req.params;
+        const result = await service.deleteProductImage(imageId);
+        res.json(result);
+    } catch (error) {
+        res.status(404).json({ error: error.message });
+    }
+};
+
+exports.setMainImage = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { imageId } = req.body;
+        const result = await service.setMainImage(id, imageId);
+        res.json(result);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
+// ============ Controladores de Atributos ============
+exports.addAttribute = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { clave, valor, orden } = req.body;
+        const result = await service.addProductAttribute(id, { clave, valor, orden });
+        res.status(201).json(result);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
+exports.updateAttribute = async (req, res) => {
+    try {
+        const { attributeId } = req.params;
+        const { clave, valor, orden } = req.body;
+        const result = await service.updateProductAttribute(attributeId, { clave, valor, orden });
+        res.json(result);
+    } catch (error) {
+        res.status(404).json({ error: error.message });
+    }
+};
+
+exports.deleteAttribute = async (req, res) => {
+    try {
+        const { attributeId } = req.params;
+        const result = await service.deleteProductAttribute(attributeId);
+        res.json(result);
+    } catch (error) {
+        res.status(404).json({ error: error.message });
     }
 };

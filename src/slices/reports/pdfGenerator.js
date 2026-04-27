@@ -109,10 +109,18 @@ exports.generateManagementReport = async (kpis, productos) => {
   const now = new Date().toLocaleDateString();
 
   const kpiCards = [
-    { label: 'Total Productos Únicos', value: kpis.totalProductos.toString() },
-    { label: 'Valor Total del Inventario', value: `S/ ${parseFloat(kpis.valorTotalInventario).toFixed(2)}` },
-    { label: 'Productos Bajo Stock', value: kpis.productosBajoStock.toString() },
-    { label: 'Producto Más Valioso', value: kpis.productoMasValioso?.nombre || 'N/A' }
+    { label: 'Total Productos', value: kpis.totalProductos.toString() },
+    { label: 'Valor Inventario', value: `S/ ${parseFloat(kpis.valorTotalInventario).toFixed(2)}` },
+    { label: 'Bajo Stock', value: kpis.productosBajoStock.toString() },
+    { label: 'Producto Top', value: kpis.productoMasValioso?.nombre || 'N/A' }
+  ];
+
+  // KPIs de Ventas
+  const salesKpiCards = [
+    { label: 'Ventas Hoy', value: (kpis.ventasHoy || 0).toString() },
+    { label: 'Ingresos Hoy', value: `S/ ${(kpis.ingresosHoy || 0).toFixed(2)}` },
+    { label: 'Ingresos Totales', value: `S/ ${(kpis.ingresosTotales || 0).toFixed(2)}` },
+    { label: 'Ticket Promedio', value: `S/ ${(kpis.ticketPromedio || 0).toFixed(2)}` }
   ];
 
   const categoriasTopRows = kpis.categoriasTop.map(cat => [cat.nombre, cat.total.toString()]);
@@ -135,7 +143,7 @@ exports.generateManagementReport = async (kpis, productos) => {
     content: [
       { text: `Fecha de generación: ${now}`, style: 'date' },
       { text: '\n' },
-      { text: 'Indicadores Clave (KPIs)', style: 'sectionHeader' },
+      { text: 'KPIs de Inventario', style: 'sectionHeader' },
       {
         columns: kpiCards.map(card => ({
           stack: [
@@ -147,7 +155,19 @@ exports.generateManagementReport = async (kpis, productos) => {
         }))
       },
       { text: '\n' },
-      { text: 'Top 10 Categorías con Más Productos', style: 'sectionHeader' },
+      { text: 'KPIs de Ventas', style: 'sectionHeader' },
+      {
+        columns: salesKpiCards.map(card => ({
+          stack: [
+            { text: card.label, style: 'kpiLabel' },
+            { text: card.value, style: 'kpiValue' }
+          ],
+          width: 'auto',
+          margin: [0, 5, 20, 5]
+        }))
+      },
+      { text: '\n' },
+      { text: 'Top Categorías', style: 'sectionHeader' },
       {
         table: {
           headerRows: 1,
@@ -162,7 +182,7 @@ exports.generateManagementReport = async (kpis, productos) => {
         }
       },
       { text: '\n' },
-      { text: 'Productos que Necesitan Reorden (Bajo Stock)', style: 'sectionHeader' },
+      { text: 'Productos Bajo Stock', style: 'sectionHeader' },
       {
         table: {
           headerRows: 1,
@@ -181,7 +201,46 @@ exports.generateManagementReport = async (kpis, productos) => {
       bajoStockRows.length === 0 ? { text: 'No hay productos bajo stock', style: 'info' } : {},
       kpis.bajoStockList.length > 10 ? { text: `... y ${kpis.bajoStockList.length - 10} productos más.`, style: 'info' } : {},
       { text: '\n' },
-      { text: 'Listado Completo de Productos Activos', style: 'sectionHeader' },
+      { text: 'Top 10 Productos Más Vendidos', style: 'sectionHeader' },
+      {
+        table: {
+          headerRows: 1,
+          widths: ['*', 'auto', 'auto', 'auto'],
+          body: [
+            [
+              { text: 'Producto', style: 'tableHeader' },
+              { text: 'SKU', style: 'tableHeader' },
+              { text: 'Unidades', style: 'tableHeader' },
+              { text: 'Ingresos', style: 'tableHeader' }
+            ],
+            ...(kpis.productosMasVendidos || []).slice(0, 10).map(p => [
+              p.nombre,
+              p.sku,
+              p.total_vendido.toString(),
+              `S/ ${parseFloat(p.total_ingresos).toFixed(2)}`
+            ])
+          ]
+        }
+      },
+      (kpis.productosMasVendidos || []).length === 0 ? { text: 'No hay datos de ventas', style: 'info' } : {},
+      { text: '\n' },
+      { text: 'Análisis de Frecuencia de Compras', style: 'sectionHeader' },
+      {
+        table: {
+          headerRows: 1,
+          widths: ['*', 'auto'],
+          body: [
+            [
+              { text: 'Rango de Compras', style: 'tableHeader' },
+              { text: 'Usuarios', style: 'tableHeader' }
+            ],
+            ...(kpis.frecuenciaCompras || []).map(f => [f.rango, f.cantidad_usuarios.toString()])
+          ]
+        }
+      },
+      (kpis.frecuenciaCompras || []).length === 0 ? { text: 'No hay datos de frecuencia', style: 'info' } : {},
+      { text: '\n' },
+      { text: 'Listado Completo de Productos', style: 'sectionHeader' },
       {
         table: {
           headerRows: 1,
@@ -193,7 +252,7 @@ exports.generateManagementReport = async (kpis, productos) => {
               { text: 'Categoría', style: 'tableHeader' },
               { text: 'Proveedor', style: 'tableHeader' },
               { text: 'Stock', style: 'tableHeader' },
-              { text: 'Precio Venta', style: 'tableHeader' }
+              { text: 'Precio', style: 'tableHeader' }
             ],
             ...productosRows
           ]

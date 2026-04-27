@@ -2,6 +2,7 @@ module.exports = {
     content: [
         './src/views/**/*.ejs',
         './src/client/**/*.{js,jsx}',
+        './store-angular/src/**/*.{html,ts}',
     ],
     theme: {
         extend: {

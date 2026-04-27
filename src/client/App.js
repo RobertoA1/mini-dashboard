@@ -11,30 +11,50 @@ import ProviderForm from './components/Providers/ProviderForm';
 import ReportOperacional from './components/Reports/ReportOperacional';
 import ReportGestion from './components/Reports/ReportGestion';
 import DeletedProducts from './components/Products/DeletedProducts'; // para restaurar
+import OrderList from './components/Orders/OrderList';
+import OrderDetail from './components/Orders/OrderDetail';
+import Loader from './components/common/Loader';
+import AccessDenied from './components/common/AccessDenied';
+import { AuthProvider, useAuth } from './context/AuthContext';
+
+const RequireAdmin = ({ children }) => {
+    const { loading, isAdmin } = useAuth();
+
+    if (loading) return <Loader />;
+    if (!isAdmin) return <AccessDenied />;
+
+    return children;
+};
 
 function App() {
     return (
-        <Router>
-            <Layout>
-                <Routes>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="/productos" element={<ProductList />} />
-                    <Route path="/productos/nuevo" element={<ProductForm />} />
-                    <Route path="/productos/editar/:id" element={<ProductForm />} />
-                    <Route path="/productos/eliminados" element={<DeletedProducts />} />
-                    <Route path="/categorias" element={<CategoryList />} />
-                    <Route path="/categorias/nueva" element={<CategoryForm />} />
-                    <Route path="/categorias/editar/:id" element={<CategoryForm />} />
-                    <Route path="/categorias/eliminadas" element={<CategoryList deleted />} />
-                    <Route path="/proveedores" element={<ProviderList />} />
-                    <Route path="/proveedores/nuevo" element={<ProviderForm />} />
-                    <Route path="/proveedores/editar/:id" element={<ProviderForm />} />
-                    <Route path="/proveedores/eliminados" element={<ProviderList deleted />} />
-                    <Route path="/reportes/operacional" element={<ReportOperacional />} />
-                    <Route path="/reportes/gestion" element={<ReportGestion />} />
-                </Routes>
-            </Layout>
-        </Router>
+        <AuthProvider>
+            <Router>
+                <RequireAdmin>
+                    <Layout>
+                        <Routes>
+                            <Route path="/" element={<Dashboard />} />
+                            <Route path="/productos" element={<ProductList />} />
+                            <Route path="/productos/nuevo" element={<ProductForm />} />
+                            <Route path="/productos/editar/:id" element={<ProductForm />} />
+                            <Route path="/productos/eliminados" element={<DeletedProducts />} />
+                            <Route path="/categorias" element={<CategoryList />} />
+                            <Route path="/categorias/nueva" element={<CategoryForm />} />
+                            <Route path="/categorias/editar/:id" element={<CategoryForm />} />
+                            <Route path="/categorias/eliminadas" element={<CategoryList deleted />} />
+                            <Route path="/proveedores" element={<ProviderList />} />
+                            <Route path="/proveedores/nuevo" element={<ProviderForm />} />
+                            <Route path="/proveedores/editar/:id" element={<ProviderForm />} />
+                            <Route path="/proveedores/eliminados" element={<ProviderList deleted />} />
+                            <Route path="/reportes/operacional" element={<ReportOperacional />} />
+                            <Route path="/reportes/gestion" element={<ReportGestion />} />
+                            <Route path="/ordenes" element={<OrderList />} />
+                            <Route path="/ordenes/:id" element={<OrderDetail />} />
+                        </Routes>
+                    </Layout>
+                </RequireAdmin>
+            </Router>
+        </AuthProvider>
     );
 }
 
