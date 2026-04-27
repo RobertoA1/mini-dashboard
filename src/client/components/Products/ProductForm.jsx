@@ -4,6 +4,208 @@ import api from '../../services/api';
 import Loader from '../common/Loader';
 import Alert from '../common/Alert';
 
+// Componente para gestión de imágenes
+const ImageManager = ({ productId, images, onImagesChange }) => {
+    const [newImageUrl, setNewImageUrl] = useState('');
+    const [newImageType, setNewImageType] = useState('detail');
+    const [loading, setLoading] = useState(false);
+
+    const handleAddImage = async () => {
+        if (!newImageUrl.trim()) return;
+        setLoading(true);
+        try {
+            const res = await api.post(`/productos/${productId}/images`, {
+                url: newImageUrl,
+                tipo: newImageType,
+                orden: images.length
+            });
+            onImagesChange([...images, res.data]);
+            setNewImageUrl('');
+        } catch (err) {
+            alert('Error al agregar imagen: ' + (err.response?.data?.error || err.message));
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDeleteImage = async (imageId) => {
+        if (!confirm('¿Está seguro de eliminar esta imagen?')) return;
+        try {
+            await api.delete(`/productos/images/${imageId}`);
+            onImagesChange(images.filter(img => img.id !== imageId));
+        } catch (err) {
+            alert('Error al eliminar imagen: ' + (err.response?.data?.error || err.message));
+        }
+    };
+
+    const handleSetMain = async (imageId) => {
+        try {
+            await api.patch(`/productos/${productId}/images/main`, { imageId });
+            // Recargar producto para obtener orden actualizado
+            const res = await api.get(`/productos/${productId}`);
+            onImagesChange(res.data.imagenes || []);
+        } catch (err) {
+            alert('Error al establecer imagen principal: ' + (err.response?.data?.error || err.message));
+        }
+    };
+
+    return (
+        <div className="border rounded-lg p-4 bg-gray-50">
+            <h3 className="font-semibold text-lg mb-3">Imágenes del Producto</h3>
+            
+            {/* Lista de imágenes */}
+            <div className="grid grid-cols-4 gap-3 mb-4">
+                {images.map((img, idx) => (
+                    <div key={img.id} className={`relative border rounded overflow-hidden ${img.orden === 0 ? 'ring-2 ring-primary' : ''}`}>
+                        <img src={img.url} alt={`Imagen ${idx + 1}`} className="w-full h-24 object-cover" />
+                        {img.orden === 0 && (
+                            <span className="absolute top-1 left-1 bg-primary text-white text-xs px-2 py-0.5 rounded">Principal</span>
+                        )}
+                        <div className="absolute bottom-0 right-0 flex gap-1 p-1">
+                            {img.orden !== 0 && (
+                                <button 
+                                    onClick={() => handleSetMain(img.id)}
+                                    className="bg-green-600 text-white text-xs px-2 py-1 rounded hover:bg-green-700"
+                                    title="Establecer como principal"
+                                >
+                                    ★
+                                </button>
+                            )}
+                            <button 
+                                onClick={() => handleDeleteImage(img.id)}
+                                className="bg-red-600 text-white text-xs px-2 py-1 rounded hover:bg-red-700"
+                            >
+                                ×
+                            </button>
+                        </div>
+                    </div>
+                ))}
+                {images.length === 0 && (
+                    <div className="col-span-4 text-center text-gray-500 py-4">
+                        No hay imágenes. Agregue una URL de imagen.
+                    </div>
+                )}
+            </div>
+
+            {/* Agregar nueva imagen */}
+            <div className="flex gap-2">
+                <input
+                    type="text"
+                    placeholder="URL de la imagen"
+                    value={newImageUrl}
+                    onChange={(e) => setNewImageUrl(e.target.value)}
+                    className="flex-1 border rounded px-3 py-2 text-sm"
+                />
+                <select
+                    value={newImageType}
+                    onChange={(e) => setNewImageType(e.target.value)}
+                    className="border rounded px-3 py-2 text-sm"
+                >
+                    <option value="card">Card</option>
+                    <option value="detail">Detalle</option>
+                </select>
+                <button
+                    onClick={handleAddImage}
+                    disabled={loading || !newImageUrl.trim()}
+                    className="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 disabled:opacity-50"
+                >
+                    {loading ? '...' : 'Agregar'}
+                </button>
+            </div>
+        </div>
+    );
+};
+
+// Componente para gestión de atributos
+const AttributeManager = ({ productId, attributes, onAttributesChange }) => {
+    const [newClave, setNewClave] = useState('');
+    const [newValor, setNewValor] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const handleAddAttribute = async () => {
+        if (!newClave.trim() || !newValor.trim()) return;
+        setLoading(true);
+        try {
+            const res = await api.post(`/productos/${productId}/attributes`, {
+                clave: newClave,
+                valor: newValor,
+                orden: attributes.length
+            });
+            onAttributesChange([...attributes, res.data]);
+            setNewClave('');
+            setNewValor('');
+        } catch (err) {
+            alert('Error al agregar atributo: ' + (err.response?.data?.error || err.message));
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDeleteAttribute = async (attrId) => {
+        if (!confirm('¿Está seguro de eliminar esta característica?')) return;
+        try {
+            await api.delete(`/productos/attributes/${attrId}`);
+            onAttributesChange(attributes.filter(attr => attr.id !== attrId));
+        } catch (err) {
+            alert('Error al eliminar atributo: ' + (err.response?.data?.error || err.message));
+        }
+    };
+
+    return (
+        <div className="border rounded-lg p-4 bg-gray-50">
+            <h3 className="font-semibold text-lg mb-3">Características del Producto</h3>
+            
+            {/* Lista de atributos */}
+            <div className="space-y-2 mb-4">
+                {attributes.map((attr) => (
+                    <div key={attr.id} className="flex items-center justify-between bg-white p-2 rounded border">
+                        <div className="flex gap-4">
+                            <span className="font-medium text-gray-700">{attr.clave}:</span>
+                            <span className="text-gray-600">{attr.valor}</span>
+                        </div>
+                        <button 
+                            onClick={() => handleDeleteAttribute(attr.id)}
+                            className="text-red-600 hover:text-red-800 px-2"
+                        >
+                            ×
+                        </button>
+                    </div>
+                ))}
+                {attributes.length === 0 && (
+                    <div className="text-center text-gray-500 py-2">
+                        No hay características definidas.
+                    </div>
+                )}
+            </div>
+
+            {/* Agregar nuevo atributo */}
+            <div className="flex gap-2">
+                <input
+                    type="text"
+                    placeholder="Característica (ej: Color)"
+                    value={newClave}
+                    onChange={(e) => setNewClave(e.target.value)}
+                    className="flex-1 border rounded px-3 py-2 text-sm"
+                />
+                <input
+                    type="text"
+                    placeholder="Valor (ej: Rojo)"
+                    value={newValor}
+                    onChange={(e) => setNewValor(e.target.value)}
+                    className="flex-1 border rounded px-3 py-2 text-sm"
+                />
+                <button
+                    onClick={handleAddAttribute}
+                    disabled={loading || !newClave.trim() || !newValor.trim()}
+                    className="bg-primary text-white px-4 py-2 rounded text-sm hover:bg-opacity-90 disabled:opacity-50"
+                >
+                    {loading ? '...' : 'Agregar'}
+                </button>
+            </div>
+        </div>
+    );
+};
+
 const ProductForm = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -11,10 +213,17 @@ const ProductForm = () => {
     const [error, setError] = useState('');
     const [categorias, setCategorias] = useState([]);
     const [proveedores, setProveedores] = useState([]);
+    const [imagenes, setImagenes] = useState([]);
+    const [atributos, setAtributos] = useState([]);
     const [formData, setFormData] = useState({
         sku: '',
         nombre: '',
         descripcion: '',
+        descuento_tipo: '',
+        descuento_valor: '0',
+        cuotas_sin_interes: false,
+        envio_gratis: false,
+        costo_envio: '0',
         categoria: '',
         precio_compra: '',
         precio_venta: '',
@@ -37,6 +246,11 @@ const ProductForm = () => {
                         sku: p.sku,
                         nombre: p.nombre,
                         descripcion: p.descripcion,
+                        descuento_tipo: p.descuento_tipo || '',
+                        descuento_valor: String(p.descuento_valor ?? '0'),
+                        cuotas_sin_interes: Boolean(p.cuotas_sin_interes),
+                        envio_gratis: Boolean(p.envio_gratis),
+                        costo_envio: String(p.costo_envio ?? '0'),
                         categoria: p.categoria,
                         precio_compra: p.precio_compra,
                         precio_venta: p.precio_venta,
@@ -44,6 +258,8 @@ const ProductForm = () => {
                         stock_minimo: p.stock_minimo,
                         proveedor: p.proveedor,
                     });
+                    setImagenes(p.imagenes || []);
+                    setAtributos(p.atributos || []);
                 }
             } catch (err) {
                 setError('Error al cargar datos');
@@ -76,6 +292,24 @@ const ProductForm = () => {
             setError('El stock no puede ser negativo');
             return false;
         }
+        const descuentoValor = parseFloat(formData.descuento_valor || '0');
+        const costoEnvio = parseFloat(formData.costo_envio || '0');
+        if (formData.descuento_tipo && Number.isNaN(descuentoValor)) {
+            setError('El descuento ingresado no es válido');
+            return false;
+        }
+        if (formData.descuento_tipo === 'porcentaje' && descuentoValor > 100) {
+            setError('El descuento porcentual no puede superar 100%');
+            return false;
+        }
+        if (formData.descuento_tipo && descuentoValor < 0) {
+            setError('El descuento no puede ser negativo');
+            return false;
+        }
+        if (!formData.envio_gratis && (Number.isNaN(costoEnvio) || costoEnvio < 0)) {
+            setError('El costo de envío no puede ser negativo');
+            return false;
+        }
         return true;
     };
 
@@ -85,12 +319,17 @@ const ProductForm = () => {
         setLoading(true);
         setError('');
         try {
+            const descuentoValor = formData.descuento_tipo ? parseFloat(formData.descuento_valor || '0') : 0;
+            const costoEnvio = formData.envio_gratis ? 0 : parseFloat(formData.costo_envio || '0');
             const payload = {
                 ...formData,
+                descuento_tipo: formData.descuento_tipo || null,
                 precio_compra: parseFloat(formData.precio_compra),
                 precio_venta: parseFloat(formData.precio_venta),
                 stock_actual: parseFloat(formData.stock_actual),
                 stock_minimo: parseFloat(formData.stock_minimo),
+                descuento_valor: descuentoValor,
+                costo_envio: costoEnvio,
             };
             if (id) {
                 await api.put(`/productos/${id}`, payload);
@@ -127,6 +366,34 @@ const ProductForm = () => {
                         <textarea name="descripcion" value={formData.descripcion} onChange={handleChange} className="border rounded w-full px-3 py-2" rows="3" required />
                     </div>
                     <div>
+                        <label className="block text-sm font-medium mb-1">Tipo de descuento</label>
+                        <select name="descuento_tipo" value={formData.descuento_tipo} onChange={handleChange} className="border rounded w-full px-3 py-2">
+                            <option value="">Sin descuento</option>
+                            <option value="porcentaje">Porcentaje</option>
+                            <option value="monto">Monto fijo</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-1">Valor de descuento</label>
+                        <input type="number" step="0.01" name="descuento_valor" value={formData.descuento_valor} onChange={handleChange} className="border rounded w-full px-3 py-2" disabled={!formData.descuento_tipo} />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-1">Costo de envío</label>
+                        <input type="number" step="0.01" name="costo_envio" value={formData.costo_envio} onChange={handleChange} className="border rounded w-full px-3 py-2" disabled={formData.envio_gratis} />
+                    </div>
+                    <div className="flex items-center pt-6">
+                        <label className="inline-flex items-center gap-2">
+                            <input type="checkbox" name="cuotas_sin_interes" checked={formData.cuotas_sin_interes} onChange={(e) => setFormData(prev => ({ ...prev, cuotas_sin_interes: e.target.checked }))} />
+                            12 cuotas sin interés
+                        </label>
+                    </div>
+                    <div className="flex items-center pt-6">
+                        <label className="inline-flex items-center gap-2">
+                            <input type="checkbox" name="envio_gratis" checked={formData.envio_gratis} onChange={(e) => setFormData(prev => ({ ...prev, envio_gratis: e.target.checked, costo_envio: e.target.checked ? '0' : prev.costo_envio }))} />
+                            Envío gratis
+                        </label>
+                    </div>
+                    <div>
                         <label className="block text-sm font-medium mb-1">Categoría *</label>
                         <select name="categoria" value={formData.categoria} onChange={handleChange} className="border rounded w-full px-3 py-2" required>
                             <option value="">Seleccione</option>
@@ -157,6 +424,29 @@ const ProductForm = () => {
                         <input type="number" step="0.01" name="stock_minimo" value={formData.stock_minimo} onChange={handleChange} className="border rounded w-full px-3 py-2" />
                     </div>
                 </div>
+
+                {/* Gestión de Imágenes - Solo en modo edición */}
+                {id && (
+                    <div className="mt-6">
+                        <ImageManager 
+                            productId={id} 
+                            images={imagenes} 
+                            onImagesChange={setImagenes} 
+                        />
+                    </div>
+                )}
+
+                {/* Gestión de Atributos - Solo en modo edición */}
+                {id && (
+                    <div className="mt-6">
+                        <AttributeManager 
+                            productId={id} 
+                            attributes={atributos} 
+                            onAttributesChange={setAtributos} 
+                        />
+                    </div>
+                )}
+
                 <div className="mt-6 flex justify-end space-x-3">
                     <button type="button" onClick={() => navigate('/productos')} className="px-4 py-2 border rounded hover:bg-gray-100">Cancelar</button>
                     <button type="submit" className="px-4 py-2 bg-primary text-white rounded hover:bg-secondary">Guardar</button>

@@ -23,6 +23,9 @@ const Sidebar = () => {
                 <NavLink to="/" className={navItemClass}>
                     <i className="fa fa-dashboard w-6"></i> {!collapsed && 'Dashboard'}
                 </NavLink>
+                <NavLink to="/ordenes" className={navItemClass}>
+                    <i className="fa fa-shopping-bag w-6"></i> {!collapsed && 'Órdenes'}
+                </NavLink>
                 <div>
                     <button onClick={toggleMantenimiento} className="w-full flex items-center p-2 text-gray-200 hover:bg-accent rounded">
                         <i className="fa fa-wrench w-6"></i>
@@ -41,6 +44,12 @@ const Sidebar = () => {
                 <div className="pt-4">
                     <NavLink to="/reportes/operacional" className={navItemClass}><i className="fa fa-file-pdf-o w-6"></i> {!collapsed && 'Reporte Operacional'}</NavLink>
                     <NavLink to="/reportes/gestion" className={navItemClass}><i className="fa fa-bar-chart w-6"></i> {!collapsed && 'Reporte Gestión'}</NavLink>
+                </div>
+                {/* Tienda */}
+                <div className="pt-4 border-t border-gray-600">
+                    <a href="http://localhost:4201/tienda/" target="_blank" rel="noopener noreferrer" className="flex items-center p-2 text-gray-200 hover:bg-accent rounded">
+                        <i className="fa fa-external-link w-6"></i> {!collapsed && 'Ir a Tienda'}
+                    </a>
                 </div>
             </nav>
         </div>
