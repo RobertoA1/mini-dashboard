@@ -18,7 +18,7 @@ import { CartService } from './services/cart.service';
             <nav class="hidden items-center gap-6 lg:flex">
               <a routerLink="/cupones" class="text-sm font-medium text-[#3f403f] hover:text-[#475841]">Cupones</a>
               @if (isAdmin) {
-                <a href="http://localhost:3000/" class="text-sm font-medium text-[#475841] hover:underline">Admin</a>
+                <a href="/panel" class="text-sm font-medium text-[#475841] hover:underline">Admin</a>
               }
             </nav>
           </div>
@@ -42,7 +42,7 @@ import { CartService } from './services/cart.service';
               <div *ngIf="user" class="invisible absolute right-0 top-full z-20 mt-3 w-52 border border-[#ced0ce] bg-white opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
                 <div class="grid gap-px bg-[#ced0ce] p-px text-sm">
                   @if (isAdmin) {
-                    <a href="http://localhost:3000/" class="bg-white px-4 py-3 hover:bg-[#e6e8e6]">Panel Admin</a>
+                    <a href="/panel" class="bg-white px-4 py-3 hover:bg-[#e6e8e6]">Panel Admin</a>
                   }
                   <a routerLink="/mis-compras" class="bg-white px-4 py-3 hover:bg-[#e6e8e6]">Mis pedidos</a>
                   <a (click)="logout()" class="bg-white px-4 py-3 hover:bg-[#e6e8e6]">Cerrar sesión</a>

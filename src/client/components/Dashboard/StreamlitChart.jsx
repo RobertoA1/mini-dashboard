@@ -1,9 +1,7 @@
 import React from 'react';
 
-// Detectar URL de Streamlit - en desarrollo usa localhost, en producción se puede configurar
-const STREAMLIT_BASE_URL = window.location.hostname === 'localhost' 
-    ? 'http://localhost:8501'
-    : (window.STREAMLIT_URL || 'http://localhost:8501');
+// URL de Streamlit - usa /streamlit relativo al dominio actual (configurado en nginx)
+const STREAMLIT_BASE_URL = '/streamlit';
 
 const StreamlitChart = ({ chartType, height = 400 }) => {
     const streamlitUrl = `${STREAMLIT_BASE_URL}/?chart=${chartType}&embed=true&embed_options=light_theme`;

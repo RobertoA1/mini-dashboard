@@ -39,8 +39,8 @@ header {visibility: hidden;}
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# API base URL
-API_BASE_URL = os.getenv('API_BASE_URL', 'http://localhost:3000/api')
+# API base URL - usa ruta relativa para funcionar desde cualquier dominio
+API_BASE_URL = os.getenv('API_BASE_URL', '/api')
 
 def fetch_dashboard_data():
     """Obtener datos del dashboard desde la API"""
