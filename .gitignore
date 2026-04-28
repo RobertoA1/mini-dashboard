@@ -4,3 +4,4 @@ dist/
 public/css/tailwind.css
 public/js/bundle.js
 /.angular/cache
+public/**
