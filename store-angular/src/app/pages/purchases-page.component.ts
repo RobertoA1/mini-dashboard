@@ -11,123 +11,159 @@ import { filter, switchMap } from 'rxjs';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <main class="mx-auto w-full max-w-container-max px-md py-xl flex-grow flex flex-col gap-lg pb-24 md:pb-xl">
-      <div class="flex flex-col gap-sm">
-        <h1 class="font-h1 text-h1 text-primary">Mis Compras</h1>
-        <p class="font-body-md text-body-md text-on-surface-variant">Historial detallado de tus pedidos realizados.</p>
-      </div>
-
-      @if (loading) {
-        <div class="flex h-64 items-center justify-center">
-          <p class="text-lg font-semibold text-primary">Cargando órdenes...</p>
-        </div>
-      } @else if (error) {
-        <div class="border border-red-500 bg-red-50 p-4 text-sm text-red-700">
-          {{ error }}
-        </div>
-      } @else {
-        @if (ordenes.length === 0) {
-          <div class="flex h-64 flex-col items-center justify-center gap-4 border border-[#ced0ce] bg-white text-center">
-            <span class="material-symbols-outlined text-6xl text-[#ced0ce]">receipt_long</span>
-            <p class="text-lg font-semibold text-[#3f403f]">No has realizado ninguna compra aún.</p>
-            <a routerLink="/" class="border border-[#475841] bg-[#475841] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#5b6d54]">Ir a la tienda</a>
+    <section class="border border-[#ced0ce] bg-white">
+      <div class="p-6 lg:p-8 xl:p-10">
+        <!-- Header -->
+        <div class="flex flex-col gap-5 border-b border-[#ced0ce] pb-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#475841]">Historial de compras</p>
+            <h1 class="mt-2 text-3xl font-semibold tracking-tight text-[#3f403f]">Mis Compras</h1>
+            <p class="mt-2 max-w-2xl text-sm leading-6 text-[#6b6d6b]">Revisa el estado de tus pedidos y accede al detalle de cada compra realizada.</p>
           </div>
-        } @else {
-          <div class="flex flex-col gap-lg">
-            @for (orden of ordenes; track orden.id) {
-              <article class="bg-surface-container-lowest border border-[#ced0ce] rounded-theme flex flex-col opacity-90 hover:opacity-100 transition-opacity">
-                <!-- Order Header -->
-                <div class="flex flex-wrap justify-between items-center p-md bg-surface-container-low border-b border-[#ced0ce]">
-                  <div class="flex flex-col gap-xs">
-                    <span class="font-label text-label text-on-surface-variant uppercase">Pedido #CEU-{{ orden.id }}</span>
-                    <span class="font-body-sm text-body-sm text-outline">Realizado el {{ orden.fecha_creacion | date:'dd MMM yyyy' }}</span>
-                  </div>
-                  <div class="flex flex-col items-end gap-xs mt-sm md:mt-0">
-                    <span class="font-h3 text-h3 text-primary">S/. {{ orden.total | number:'1.2-2' }}</span>
-                    <a [routerLink]="['/confirmacion', orden.id]" class="font-label text-label text-secondary hover:underline flex items-center gap-1">
-                      Ver detalle <span class="material-symbols-outlined text-[16px]">visibility</span>
-                    </a>
-                  </div>
-                </div>
+        </div>
 
-                <!-- Products Summary -->
-                <div class="p-md border-b border-[#ced0ce] flex flex-col gap-4">
-                  @for (item of orden.items; track item.id) {
-                    <div class="flex gap-md items-start">
-                      <div class="flex-shrink-0 w-20 h-20 border border-[#ced0ce] rounded-theme bg-surface-container flex items-center justify-center overflow-hidden">
-                        @if (item.producto?.imagen) {
-                          <img [src]="item.producto.imagen" [alt]="item.producto.nombre" class="w-full h-full object-contain" />
-                        } @else {
-                          <span class="material-symbols-outlined text-3xl text-[#ced0ce]">package_2</span>
-                        }
-                      </div>
-                      <div class="flex flex-col text-left">
-                        <h4 class="font-bold text-primary text-sm uppercase tracking-wide">{{ item.producto?.nombre }}</h4>
-                        @if (item.producto?.proveedorRel) {
-                          <p class="text-xs font-semibold text-secondary uppercase tracking-wider mb-1">Marca: {{ item.producto?.proveedorRel?.nombre }}</p>
-                        }
-                        <p class="text-xs text-on-surface-variant line-clamp-2 leading-relaxed max-w-2xl">{{ item.producto?.descripcion }}</p>
-                        <div class="mt-2 flex items-center gap-3">
-                          <span class="text-xs font-bold text-[#475841] bg-[#eaf1ed] px-2 py-0.5 rounded-sm">Cant: {{ item.cantidad }}</span>
-                          <span class="text-xs font-bold text-[#475841]">S/. {{ item.precio_unitario | number:'1.2-2' }}</span>
+        <!-- Content -->
+        <div class="mt-6 space-y-6">
+          @if (loading) {
+            <div class="border border-[#ced0ce] bg-[#f8f9f8] p-8 text-center">
+              <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-4xl text-[#475841] animate-pulse">sync</span>
+                <p class="text-sm font-medium text-[#3f403f]">Cargando tus órdenes...</p>
+              </div>
+            </div>
+          } @else if (error) {
+            <div class="border border-red-500 bg-red-50 p-4 text-sm text-red-700">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined">error</span>
+                {{ error }}
+              </div>
+            </div>
+          } @else {
+            @if (ordenes.length === 0) {
+              <div class="border border-[#ced0ce] bg-[#f8f9f8] p-12 text-center">
+                <div class="flex flex-col items-center gap-4">
+                  <span class="material-symbols-outlined text-6xl text-[#ced0ce]">receipt_long</span>
+                  <div>
+                    <p class="text-lg font-semibold text-[#3f403f]">No has realizado ninguna compra</p>
+                    <p class="mt-1 text-sm text-[#6b6d6b]">Explora nuestro catálogo y encuentra productos increíbles.</p>
+                  </div>
+                  <a routerLink="/" class="inline-flex items-center gap-2 border border-[#475841] bg-[#475841] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#5b6d54]">
+                    <span class="material-symbols-outlined text-sm">shopping_bag</span>
+                    Ir a la tienda
+                  </a>
+                </div>
+              </div>
+            } @else {
+              <div class="space-y-6">
+                @for (orden of ordenes; track orden.id) {
+                  <article class="border border-[#ced0ce] bg-white overflow-hidden">
+                    <!-- Order Header -->
+                    <div class="border-b border-[#ced0ce] px-5 py-4 bg-[#f8f9f8]">
+                      <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                          <div class="inline-flex h-8 w-8 items-center justify-center border border-[#475841] bg-[#475841] text-sm font-semibold text-white">
+                            {{ orden.id }}
+                          </div>
+                          <div>
+                            <h2 class="text-lg font-semibold tracking-tight text-[#3f403f]">Pedido #CEU-{{ orden.id }}</h2>
+                            <p class="text-sm text-[#6b6d6b]">Realizado el {{ orden.fecha_creacion | date:'dd MMM yyyy' }}</p>
+                          </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                          <span class="text-2xl font-semibold tracking-tight text-[#475841]">S/. {{ orden.total | number:'1.2-2' }}</span>
+                          <a [routerLink]="['/confirmacion', orden.id]" class="inline-flex items-center gap-1 border border-[#ced0ce] bg-white px-4 py-2 text-sm font-semibold text-[#3f403f] transition-colors hover:bg-[#ced0ce]">
+                            Ver detalle
+                            <span class="material-symbols-outlined text-[16px]">visibility</span>
+                          </a>
                         </div>
                       </div>
                     </div>
-                  }
-                </div>
 
-                <!-- Stepper Progress -->
-                <div class="p-md bg-surface-container-lowest">
-                  <h3 class="font-label text-label text-on-surface-variant uppercase mb-4">Estado del Pedido: {{ orden.estado }}</h3>
-                  <div class="relative flex items-center justify-between w-full max-w-3xl mx-auto">
-                    <!-- Connecting Line -->
-                    <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-full h-[2px] bg-[#ced0ce] -z-10"></div>
-                    <div class="absolute left-0 top-1/2 transform -translate-y-1/2 h-[2px] bg-[#475841] -z-10 transition-all duration-500"
-                         [style.width]="getStepProgress(orden.estado)"></div>
-                    
-                    <!-- Step 1: Confirmado -->
-                    <div class="flex flex-col items-center gap-2 bg-surface-container-lowest px-2">
-                      <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
-                           [ngClass]="isStepActive(orden.estado, 1) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
-                        <span class="material-symbols-outlined text-[18px]">check</span>
-                      </div>
-                      <span class="font-label text-label" [ngClass]="isStepActive(orden.estado, 1) ? 'text-primary' : 'text-outline-variant'">Confirmado</span>
+                    <!-- Products Summary -->
+                    <div class="divide-y divide-[#ced0ce]">
+                      @for (item of orden.items; track item.id) {
+                        <div class="flex gap-4 px-5 py-4">
+                          <div class="flex h-16 w-16 items-center justify-center border border-[#ced0ce] bg-[#e6e8e6] text-[#475841]">
+                            @if (item.producto?.imagen) {
+                              <img [src]="item.producto.imagen" [alt]="item.producto.nombre" class="w-full h-full object-contain" />
+                            } @else {
+                              <span class="material-symbols-outlined text-2xl">package_2</span>
+                            }
+                          </div>
+                          <div class="min-w-0 flex-1">
+                            <div class="flex items-start justify-between gap-3">
+                              <div>
+                                <h3 class="text-sm font-semibold text-[#3f403f]">{{ item.producto?.nombre }}</h3>
+                                @if (item.producto?.proveedorRel) {
+                                  <p class="mt-1 text-xs text-[#6b6d6b]">Marca: {{ item.producto?.proveedorRel?.nombre }}</p>
+                                }
+                                <p class="mt-1 text-xs text-[#6b6d6b] line-clamp-1">{{ item.producto?.descripcion }}</p>
+                                <p class="mt-2 text-xs text-[#6b6d6b]">Cantidad: {{ item.cantidad }}</p>
+                              </div>
+                              <p class="text-sm font-semibold text-[#475841]">S/. {{ item.precio_unitario | number:'1.2-2' }}</p>
+                            </div>
+                          </div>
+                        </div>
+                      }
                     </div>
 
-                    <!-- Step 2: Empaque -->
-                    <div class="flex flex-col items-center gap-2 bg-surface-container-lowest px-2">
-                      <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
-                           [ngClass]="isStepActive(orden.estado, 2) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
-                        <span class="material-symbols-outlined text-[18px]">inventory_2</span>
+                    <!-- Stepper Progress -->
+                    <div class="border-t border-[#ced0ce] bg-[#f8f9f8] px-5 py-5">
+                      <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-[#475841]">local_shipping</span>
+                        <h3 class="text-sm font-semibold text-[#3f403f]">Estado del pedido</h3>
+                        <span class="border border-[#9fb8ad] bg-[#eaf1ed] px-2 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#475841]">{{ orden.estado }}</span>
                       </div>
-                      <span class="font-label text-label" [ngClass]="isStepActive(orden.estado, 2) ? 'text-primary' : 'text-outline-variant'">Empaque</span>
-                    </div>
+                      <div class="relative flex items-center justify-between w-full max-w-2xl">
+                        <!-- Connecting Line -->
+                        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-full h-[2px] bg-[#ced0ce] -z-10"></div>
+                        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 h-[2px] bg-[#475841] -z-10 transition-all duration-500" [style.width]="getStepProgress(orden.estado)"></div>
+                        
+                        <!-- Step 1: Confirmado -->
+                        <div class="flex flex-col items-center gap-2 bg-[#f8f9f8] px-1">
+                          <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
+                               [ngClass]="isStepActive(orden.estado, 1) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
+                            <span class="material-symbols-outlined text-[16px]">check</span>
+                          </div>
+                          <span class="text-[11px] font-medium uppercase tracking-[0.12em]" [ngClass]="isStepActive(orden.estado, 1) ? 'text-[#475841]' : 'text-[#8a8d8a]'">Confirmado</span>
+                        </div>
 
-                    <!-- Step 3: Entrega -->
-                    <div class="flex flex-col items-center gap-2 bg-surface-container-lowest px-2">
-                      <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
-                           [ngClass]="isStepActive(orden.estado, 3) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
-                        <span class="material-symbols-outlined text-[18px]">local_shipping</span>
-                      </div>
-                      <span class="font-label text-label" [ngClass]="isStepActive(orden.estado, 3) ? 'text-primary' : 'text-outline-variant'">Entrega</span>
-                    </div>
+                        <!-- Step 2: Empaque -->
+                        <div class="flex flex-col items-center gap-2 bg-[#f8f9f8] px-1">
+                          <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
+                               [ngClass]="isStepActive(orden.estado, 2) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
+                            <span class="material-symbols-outlined text-[16px]">inventory_2</span>
+                          </div>
+                          <span class="text-[11px] font-medium uppercase tracking-[0.12em]" [ngClass]="isStepActive(orden.estado, 2) ? 'text-[#475841]' : 'text-[#8a8d8a]'">Empaque</span>
+                        </div>
 
-                    <!-- Step 4: Entregado -->
-                    <div class="flex flex-col items-center gap-2 bg-surface-container-lowest px-2">
-                      <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
-                           [ngClass]="isStepActive(orden.estado, 4) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
-                        <span class="material-symbols-outlined text-[18px]">home</span>
+                        <!-- Step 3: Entrega -->
+                        <div class="flex flex-col items-center gap-2 bg-[#f8f9f8] px-1">
+                          <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
+                               [ngClass]="isStepActive(orden.estado, 3) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
+                            <span class="material-symbols-outlined text-[16px]">local_shipping</span>
+                          </div>
+                          <span class="text-[11px] font-medium uppercase tracking-[0.12em]" [ngClass]="isStepActive(orden.estado, 3) ? 'text-[#475841]' : 'text-[#8a8d8a]'">Entrega</span>
+                        </div>
+
+                        <!-- Step 4: Entregado -->
+                        <div class="flex flex-col items-center gap-2 bg-[#f8f9f8] px-1">
+                          <div class="w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors"
+                               [ngClass]="isStepActive(orden.estado, 4) ? 'bg-[#475841] text-white border-[#475841]' : 'bg-white text-[#ced0ce] border-[#ced0ce]'">
+                            <span class="material-symbols-outlined text-[16px]">home</span>
+                          </div>
+                          <span class="text-[11px] font-medium uppercase tracking-[0.12em]" [ngClass]="isStepActive(orden.estado, 4) ? 'text-[#475841]' : 'text-[#8a8d8a]'">Entregado</span>
+                        </div>
                       </div>
-                      <span class="font-label text-label" [ngClass]="isStepActive(orden.estado, 4) ? 'text-primary' : 'text-outline-variant'">Entregado</span>
                     </div>
-                  </div>
-                </div>
-              </article>
+                  </article>
+                }
+              </div>
             }
-          </div>
-        }
-      }
-    </main>
+          }
+        </div>
+      </div>
+    </section>
   `,
 })
 export class PurchasesPageComponent implements OnInit {
@@ -209,5 +245,17 @@ export class PurchasesPageComponent implements OnInit {
     };
     const currentStep = estadoMap[estado] || 0;
     return currentStep >= step;
+  }
+
+  getPedidosActivos(): number {
+    return this.ordenes.filter(o => o.estado !== 'ENTREGADA' && o.estado !== 'CANCELADA').length;
+  }
+
+  getPedidosEntregados(): number {
+    return this.ordenes.filter(o => o.estado === 'ENTREGADA').length;
+  }
+
+  getTotalInvertido(): number {
+    return this.ordenes.reduce((total, o) => total + o.total, 0);
   }
 }
