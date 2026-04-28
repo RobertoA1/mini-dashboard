@@ -29,5 +29,8 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
     mode: 'development',
+    dotenv: {
+        prefix: 'VITE_',
+    },
     devtool: 'source-map',
 };

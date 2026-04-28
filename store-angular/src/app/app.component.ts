@@ -18,7 +18,7 @@ import { CartService } from './services/cart.service';
             <nav class="hidden items-center gap-6 lg:flex">
               <a routerLink="/cupones" class="text-sm font-medium text-[#3f403f] hover:text-[#475841]">Cupones</a>
               @if (isAdmin) {
-                <a href="/panel" class="text-sm font-medium text-[#475841] hover:underline">Admin</a>
+                <a href="/" class="text-sm font-medium text-[#475841] hover:underline">Admin</a>
               }
             </nav>
           </div>

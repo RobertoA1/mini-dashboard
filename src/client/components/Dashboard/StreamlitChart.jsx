@@ -1,7 +1,7 @@
 import React from 'react';
 
 // URL de Streamlit - usa /streamlit relativo al dominio actual (configurado en nginx)
-const STREAMLIT_BASE_URL = '/streamlit';
+const STREAMLIT_BASE_URL = import.meta.env.VITE_STREAMLIT_URL || '/streamlit';
 
 const StreamlitChart = ({ chartType, height = 400 }) => {
     const streamlitUrl = `${STREAMLIT_BASE_URL}/?chart=${chartType}&embed=true&embed_options=light_theme`;
